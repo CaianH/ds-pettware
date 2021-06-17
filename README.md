@@ -1,6 +1,7 @@
 # ds-pettware
 Desenvolvimento do Sistema - PETTWARE
-Integrantes do Gropo:
+
+Integrantes do Grupo:
 - Caian Henrique
 - Milena Lucas
 - Alinne Tonetti
