@@ -24,5 +24,10 @@ namespace PETTWARE
         {
             InitializeComponent();
         }
+
+        private void Click_Produto(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

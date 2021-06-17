@@ -8,5 +8,21 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <Menu>
+                <MenuItem Header="Cadastrar">
+                    <MenuItem Header="Produto" Click="Click_Produto"/>
+                </MenuItem>
+                <MenuItem Header="Consultar">
+                    <MenuItem Header="Produto"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+
     </Grid>
 </Window>
