@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Cadastrar_Produto
+namespace PETTWARE
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
