@@ -29,5 +29,11 @@ namespace PETTWARE
         {
 
         }
+
+        private void Click_CadServico(object sender, RoutedEventArgs e)
+        {
+            CadastrarServicoWindow CadServico = new CadastrarServicoWindow();
+            CadServico.ShowDialog();
+        }
     }
 }
