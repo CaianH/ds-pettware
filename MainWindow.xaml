@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -14,17 +14,24 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
+            
             <Menu>
+                <!--___________CADASTROS___________-->
                 <MenuItem Header="Cadastrar">
                     <MenuItem Header="Produto" Click="Click_Produto"/>
                     <MenuItem Header="Serviço" Click="Click_CadServico"/>
-                    
                 </MenuItem>
+                <!--___________CADASTROS___________-->
+
+                <!--___________CONSULTAS___________-->
                 <MenuItem Header="Consultar">
                     <MenuItem Header="Produto"/>
-                    
                 </MenuItem>
+                <!--___________CONSULTAS___________-->
+
+                <MenuItem Header="Vender" Click="Click_Vender"/>
             </Menu>
+            
         </StackPanel>
 
     </Grid>

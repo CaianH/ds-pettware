@@ -35,5 +35,11 @@ namespace PETTWARE
             CadastrarServicoWindow CadServico = new CadastrarServicoWindow();
             CadServico.ShowDialog();
         }
+
+        private void Click_Vender(object sender, RoutedEventArgs e)
+        {
+            FazerVendaWindow Vender = new FazerVendaWindow();
+            Vender.ShowDialog();
+        }
     }
 }
