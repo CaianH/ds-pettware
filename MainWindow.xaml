@@ -17,11 +17,14 @@
             
             <Menu>
                 <!--___________CADASTROS___________-->
-                <MenuItem Header="Cadastrar">
-                    <MenuItem Header="Produto" Click="Click_Produto"/>
+                <MenuItem Header="Cadastrar" Click="MenuItem_Click">
                     <MenuItem Header="Serviço" Click="Click_CadServico"/>
+                    <MenuItem Header="Produto" Click="Click_Produto"/>
+                    <MenuItem Header="Cliente" Click="Click_CadCliente"/>
+                    <MenuItem Header="Funcionário" Click="Click_CadFuncionario"/>
                 </MenuItem>
                 <!--___________CADASTROS___________-->
+                
 
                 <!--___________CONSULTAS___________-->
                 <MenuItem Header="Consultar">
