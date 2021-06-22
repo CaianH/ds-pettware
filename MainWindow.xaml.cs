@@ -57,7 +57,7 @@ namespace PETTWARE
             Vender.ShowDialog();
         }
 
-<<<<<<< HEAD
+
         private void Click_CadFornecedor(object sender, RoutedEventArgs e)
         {
             CadFornecedorWindow Fornecedor = new CadFornecedorWindow();
@@ -68,11 +68,7 @@ namespace PETTWARE
         {
             CadDespesasWindow Despesas = new CadDespesasWindow();
             Despesas.ShowDialog();
-=======
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
->>>>>>> main
         }
+
+       
     }
-}

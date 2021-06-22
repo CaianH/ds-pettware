@@ -25,8 +25,7 @@
                     <MenuItem Header="Funcionário" Click="Click_CadFuncionario"/>
                     <MenuItem Header="Fornecedor" Click="Click_CadFornecedor"/>
                     <MenuItem Header="Despesas" Click="Click_CadDespesas"/>
-                    
-
+                   
                 </MenuItem>
                 <!--___________CADASTROS___________-->
                 
