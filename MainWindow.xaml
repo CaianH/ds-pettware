@@ -19,14 +19,14 @@
                 <!--___________CADASTROS___________-->
                 <MenuItem Header="Cadastrar" Click="MenuItem_Click">
                     <MenuItem Header="Serviço" Click="Click_CadServico"/>
-<<<<<<< HEAD
+
                     <MenuItem Header="Produto" Click="Click_Produto"/>
                     <MenuItem Header="Cliente" Click="Click_CadCliente"/>
                     <MenuItem Header="Funcionário" Click="Click_CadFuncionario"/>
-=======
+
                     <MenuItem Header="Fornecedor" Click="Click_CadFornecedor"/>
                     <MenuItem Header="Despesas" Click="Click_CadDespesas"/>
->>>>>>> main
+
                 </MenuItem>
                 <!--___________CADASTROS___________-->
                 
