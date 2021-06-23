@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="Cadastrar Funcionário" Height="450" Width="800">
     <Grid>
-        
+        <TextBlock HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="800" Height="21" Background="#FF5C687D"/>
     </Grid>
 </Window>
