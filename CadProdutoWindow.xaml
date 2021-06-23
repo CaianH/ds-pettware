@@ -22,6 +22,7 @@
         <TextBox HorizontalAlignment="Left" Margin="210,235,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Margin="210,285,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="647,280,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="800" Height="21" Background="#FF5C687D"/>
 
     </Grid>
 </Window>
