@@ -13,19 +13,13 @@ using System.Windows.Shapes;
 namespace PETTWARE
 {
     /// <summary>
-    /// Lógica interna para CadProdutoWindow.xaml
+    /// Lógica interna para ConfirmCadFuncionarioWindow1.xaml
     /// </summary>
-    public partial class CadProdutoWindow : Window
+    public partial class ConfirmCadFuncionarioWindow1 : Window
     {
-        public CadProdutoWindow()
+        public ConfirmCadFuncionarioWindow1()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            ConfirmaçãodecadastroProdutoWindow1 Confirmacao = new ConfirmaçãodecadastroProdutoWindow1();
-            Confirmacao.ShowDialog();
         }
     }
 }

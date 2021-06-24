@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE"
+        xmlns:wpftool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
 
         <Grid.RowDefinitions>
@@ -20,6 +21,7 @@
                 <MenuItem Header="Cadastrar" Click="MenuItem_Click">
                     
                     <MenuItem Header="Serviço" Click="Click_CadServico"/>
+
                     <MenuItem Header="Produto" Click="Click_Produto"/>
                     <MenuItem Header="Cliente" Click="Click_CadCliente"/>
                     <MenuItem Header="Funcionário" Click="Click_CadFuncionario"/>
