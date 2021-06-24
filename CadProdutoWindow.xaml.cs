@@ -24,8 +24,7 @@ namespace PETTWARE
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ConfirmaçãodecadastroProdutoWindow1 Confirmacao = new ConfirmaçãodecadastroProdutoWindow1();
-            Confirmacao.ShowDialog();
+            MessageBox.Show("Produto Cadastrado com Sucesso!");
         }
     }
 }
