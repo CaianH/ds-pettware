@@ -21,5 +21,10 @@ namespace PETTWARE
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Funcionário Cadastrado com Sucesso");
+        }
     }
 }

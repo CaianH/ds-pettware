@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE"
         mc:Ignorable="d"
-        Title="Cadastrar Produto" Height="500" Width="800">
+        Title="Cadastrar Produto" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
-        <Label x:Name="Codigo" Content="Código" HorizontalAlignment="Left" Margin="50,80,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Codigo" Content="Código:" HorizontalAlignment="Left" Margin="50,80,0,0" VerticalAlignment="Top"/>
         <Label Content="Descrição do Produto" HorizontalAlignment="Left" Margin="50,130,0,0" VerticalAlignment="Top"/>
         <Label Content="Preço Normal" HorizontalAlignment="Left" Margin="50,180,0,0" VerticalAlignment="Top"/>
         <Label Content="Preço com Desconto" HorizontalAlignment="Left" Margin="50,230,0,0" VerticalAlignment="Top"/>
@@ -16,12 +16,13 @@
         <Button Content="Consultar Produto" HorizontalAlignment="Left" Margin="50,387,0,0" VerticalAlignment="Top" FontSize="15"/>
         <Button Content="Cancelar" HorizontalAlignment="Left" Margin="424,372,0,0" VerticalAlignment="Top" FontSize="15"/>
         <Button Content="Salvar" HorizontalAlignment="Left" Margin="545,372,0,0" VerticalAlignment="Top" FontSize="15" Click="Button_Click"/>
-        <TextBox HorizontalAlignment="Left" Margin="210,85,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="210,135,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="210,185,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="210,235,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="210,285,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="210,85,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="210,135,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="210,185,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="210,235,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="210,285,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="647,280,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="800" Height="21" Background="#FF5C687D"/>
 
     </Grid>
 </Window>
