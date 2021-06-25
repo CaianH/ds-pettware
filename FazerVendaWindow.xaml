@@ -15,7 +15,9 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
+            <Label Content="Nome do Cliente"/>
             <TextBox Text="TextBox" TextWrapping="Wrap" Width="120" Margin="20"/>
+            
 
         </StackPanel>
     </Grid>

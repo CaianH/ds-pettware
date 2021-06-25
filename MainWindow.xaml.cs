@@ -70,13 +70,9 @@ namespace PETTWARE
             Despesas.ShowDialog();
         }
 
-        private void Click_CadFornecedor(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Click_CadDespesas(object sender, RoutedEventArgs e)
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 
         }
     }
+}
