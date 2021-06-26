@@ -5,18 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE"
         mc:Ignorable="d"
-        Title="CadFornecedorWindow" Height="450" Width="800">
+        Title="CadFornecedorWindow" Height="450" Width="834"  MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFF5F3F4">
     <Grid>
 
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="290"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="117"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="117"/>
+            <ColumnDefinition Width="200"/>
+
         </Grid.ColumnDefinitions>
 
-        
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="5">
+            <Border BorderBrush="#FF5C677D" Height="40" Width="834" Background="#FF5C677D"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Label Content="Código" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
+            <Label Content="Nome" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
+            <Label Content="CPF" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
+            <Label Content="RG" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
+            <Label Content="Telefone" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
+        </StackPanel>
 
 
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBox  Width="84" Height="30" Margin="5 12 0 0"  Background="#D6D6D6" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="190" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="190" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="190" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="190" Height="25" Margin="5 14 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+        </StackPanel>
 
+
+        <StackPanel Grid.Row="1" Grid.Column="3">
+            <Label Content="UF" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
+            <Label Content="CEP" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
+            <Label Content="Bairro" Margin="2 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
+            <Label Content="Logradouro" Margin="2 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
+            <Label Content="Bairro" Margin="2 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="5">
+            <ComboBox Width="90" Height="25" Margin="5 12 0 0"   Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="190" Height="25" Margin="5 12 0 0"   Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="190" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="190" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="190" Height="25" Margin="5 14 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+        </StackPanel>
 
 
     </Grid>
