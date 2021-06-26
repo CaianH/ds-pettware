@@ -15,11 +15,11 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
-            
+
             <Menu>
                 <!--___________CADASTROS___________-->
                 <MenuItem Header="Cadastrar" Click="MenuItem_Click">
-                    
+
                     <MenuItem Header="Serviço" Click="Click_CadServico"/>
 
                     <MenuItem Header="Produto" Click="Click_Produto"/>
@@ -27,20 +27,22 @@
                     <MenuItem Header="Funcionário" Click="Click_CadFuncionario"/>
                     <MenuItem Header="Fornecedor" Click="Click_CadFornecedor"/>
                     <MenuItem Header="Despesas" Click="Click_CadDespesas"/>
-                   
+                    <MenuItem Header="Tipo de Despesa" Click="TipoDespesa_Click"/>
+
                 </MenuItem>
                 <!--___________CADASTROS___________-->
-                
+
 
                 <!--___________CONSULTAS___________-->
-                <MenuItem Header="Consultar">
+                <MenuItem Header="Consultar" Click="Caixa_Click">
                     <MenuItem Header="Produto"/>
+                    <MenuItem Header="Caixa"/>
                 </MenuItem>
                 <!--___________CONSULTAS___________-->
 
                 <MenuItem Header="Vender" Click="Click_Vender"/>
             </Menu>
-            
+
         </StackPanel>
 
     </Grid>

@@ -6,19 +6,54 @@
         xmlns:local="clr-namespace:PETTWARE"
         xmlns:wpftool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
-        Title="Vender" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="Vender" Height="1080" Width="1920" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFF5F3F4">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
-            <Label Content="Nome do Cliente"/>
-            <TextBox Text="TextBox" TextWrapping="Wrap" Width="120" Margin="20"/>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="640"/>
+            <ColumnDefinition Width="640"/>
+            <ColumnDefinition Width="640"/>
+
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
+            <Border BorderThickness="1" BorderBrush="#FF5C677D" Height="40" Width="1922" Background="#FF5C677D"/>
 
         </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Label Content="Nome do Cliente" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <TextBox Text="" Margin="30 0 0 0" TextWrapping="Wrap" Width="272" Background="White" HorizontalAlignment="Left" Height="25"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Label Content="Forma de Pagamento" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <ComboBox Width="221" Margin="35 0 0 0" HorizontalAlignment="Left" Background="White" BorderBrush="White" Height="25"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <Label Content="Dia da Compra" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <DatePicker Width="171" Margin="35 0 0 0" HorizontalAlignment="Left"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <Label Content="Nome do Funcionário/a" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <TextBox Text="" Margin="30 0 0 0" TextWrapping="Wrap" Width="272" Background="White" HorizontalAlignment="Left" Height="25"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="0">
+            <Label Content="Buscar Produto / Serviço" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <ComboBox Width="272" Margin="30 0 0 0" HorizontalAlignment="Left" Background="White" BorderBrush="White" Height="25"/>
+
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <Label Content="Quantidade" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <TextBox Text="" Margin="35 0 0 0" TextWrapping="Wrap" Width="63" Background="White" HorizontalAlignment="Left" Height="25"/>
+        </StackPanel>
+        <Image Source="/Imagens/consultar.png" Height="30" VerticalAlignment="Top" Margin="15,60,625,0" Grid.Row="3" RenderTransformOrigin="0.51,2.646" Grid.ColumnSpan="2"/>
+
     </Grid>
 </Window>

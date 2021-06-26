@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="ConsulCaixaWindow" Height="481" Width="851">
     <Grid>
+        <TextBox HorizontalAlignment="Left" Margin="144,92,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="247"/>
+        <Label Content="Receita Total:" HorizontalAlignment="Left" Margin="43,89,0,0" VerticalAlignment="Top" Width="124"/>
+        <Label Content="Total de Vendas: " HorizontalAlignment="Left" Margin="43,126,0,0" VerticalAlignment="Top" Width="124"/>
+        <Label Content="Despesas Totais:" HorizontalAlignment="Left" Margin="43,161,0,0" VerticalAlignment="Top" Width="124"/>
+        <Label Content="Saldo:" HorizontalAlignment="Left" Margin="43,199,0,0" VerticalAlignment="Top" Width="124"/>
+        <Label Content="Lucro:" HorizontalAlignment="Left" Margin="43,230,0,0" VerticalAlignment="Top" Width="124"/>
+        <Label Content="Débito:" HorizontalAlignment="Left" Margin="43,268,0,0" VerticalAlignment="Top" Width="124"/>
+        <TextBox HorizontalAlignment="Left" Margin="144,129,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="247"/>
+        <TextBox HorizontalAlignment="Left" Margin="144,165,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="247"/>
+        <TextBox HorizontalAlignment="Left" Margin="105,202,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="286"/>
+        <TextBox HorizontalAlignment="Left" Margin="105,272,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="286"/>
+        <TextBox HorizontalAlignment="Left" Margin="105,234,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="286"/>
 
     </Grid>
 </Window>
