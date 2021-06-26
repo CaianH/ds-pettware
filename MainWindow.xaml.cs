@@ -74,5 +74,15 @@ namespace PETTWARE
         {
 
         }
+
+        private void TipoDespesa_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Caixa_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
