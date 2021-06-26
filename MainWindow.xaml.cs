@@ -77,12 +77,14 @@ namespace PETTWARE
 
         private void TipoDespesa_Click(object sender, RoutedEventArgs e)
         {
-
+            CadTiposDespesasWindow TipoDespesa = new CadTiposDespesasWindow();
+            TipoDespesa.ShowDialog();
         }
 
         private void Caixa_Click(object sender, RoutedEventArgs e)
         {
-
+            ConsulCaixaWindow Caixa = new ConsulCaixaWindow();
+            Caixa.ShowDialog();
         }
     }
 }
