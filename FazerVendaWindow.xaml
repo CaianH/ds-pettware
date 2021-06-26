@@ -20,7 +20,7 @@
             <ColumnDefinition Width="640"/>
             <ColumnDefinition Width="640"/>
             <ColumnDefinition Width="640"/>
-            
+
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
@@ -29,24 +29,31 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="0">
-            <Label Content="Nome do Cliente:" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
-            <TextBox Text="TextBox" Margin="30 0 0 0" TextWrapping="Wrap" Width="272" Background="White" HorizontalAlignment="Left" Height="25"/>
+            <Label Content="Nome do Cliente" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <TextBox Text="" Margin="30 0 0 0" TextWrapping="Wrap" Width="272" Background="White" HorizontalAlignment="Left" Height="25"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1">
-            <Label Content="Forma de Pagamento:" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <Label Content="Forma de Pagamento" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
             <ComboBox Width="221" Margin="35 0 0 0" HorizontalAlignment="Left" Background="White" BorderBrush="White" Height="25"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="2">
-            <Label Content="Dia da Compra:" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <Label Content="Dia da Compra" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
             <DatePicker Width="171" Margin="35 0 0 0" HorizontalAlignment="Left"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="0">
-            <Label Content="Nome do Funcionário/a:" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
-            <TextBox Text="TextBox" Margin="30 0 0 0" TextWrapping="Wrap" Width="272" Background="White" HorizontalAlignment="Left" Height="25"/>
+            <Label Content="Nome do Funcionário/a" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <TextBox Text="" Margin="30 0 0 0" TextWrapping="Wrap" Width="272" Background="White" HorizontalAlignment="Left" Height="25"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.Column="0">
-            <Label Content="Buscar Produto / Serviço:" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <Label Content="Buscar Produto / Serviço" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
             <ComboBox Width="272" Margin="30 0 0 0" HorizontalAlignment="Left" Background="White" BorderBrush="White" Height="25"/>
+
         </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <Label Content="Quantidade" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <TextBox Text="" Margin="35 0 0 0" TextWrapping="Wrap" Width="63" Background="White" HorizontalAlignment="Left" Height="25"/>
+        </StackPanel>
+        <Image Source="/Imagens/consultar.png" Height="30" VerticalAlignment="Top" Margin="15,60,625,0" Grid.Row="3" RenderTransformOrigin="0.51,2.646" Grid.ColumnSpan="2"/>
+
     </Grid>
 </Window>
