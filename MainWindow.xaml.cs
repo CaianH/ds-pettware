@@ -96,5 +96,11 @@ namespace PETTWARE
             ConsulCaixaWindow Caixa = new ConsulCaixaWindow();
             Caixa.ShowDialog();
         }
+
+        private void ConsuFuncionario(object sender, RoutedEventArgs e)
+        {
+            ConsulFuncionarioWindow ConsuFuncionario = new ConsulFuncionarioWindow();
+            ConsuFuncionario.ShowDialog();
+        }
     }
 }

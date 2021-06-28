@@ -35,18 +35,9 @@
         <StackPanel Grid.Row="1" Grid.Column="1">
             <Label Content="Forma de Pagamento" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
             <ComboBox Width="221" Margin="35 0 0 0" HorizontalAlignment="Left" Background="White" BorderBrush="White" Height="25">
-                <ComboBoxItem>
-                    <TextBlock Text="3X no Cartão"/>
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    <TextBlock Text="2X no Cartão"/>
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    <TextBlock Text="1X no Cartão"/>
-                </ComboBoxItem>
-                <ComboBoxItem>
-                    <TextBlock Text="Ávista"/>
-                </ComboBoxItem>
+                <ComboBoxItem>3X NO CARTÃO</ComboBoxItem>
+                <ComboBoxItem>2X NO CARTÃO</ComboBoxItem>
+                <ComboBoxItem>ÁVISTA</ComboBoxItem>
             </ComboBox>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="2">
@@ -62,11 +53,20 @@
             <ComboBox Width="272" Margin="30 0 0 0" HorizontalAlignment="Left" Background="White" BorderBrush="White" Height="25"/>
 
         </StackPanel>
-        <StackPanel Grid.Row="3" Grid.Column="1">
+        <StackPanel Grid.Row="3" Grid.Column="1" Margin="0,0,408,0">
             <Label Content="Quantidade" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
             <TextBox Text="" Margin="35 0 0 0" TextWrapping="Wrap" Width="63" Background="White" HorizontalAlignment="Left" Height="25"/>
         </StackPanel>
         <Image Source="/Imagens/consultar.png" Height="30" VerticalAlignment="Top" Margin="296,60,285,0" Grid.Row="3" RenderTransformOrigin="0.51,2.646"/>
+        <Image Source="/Imagens/iconeadicionar.png" Margin="106,65,490,10" Grid.Row="3" Grid.Column="1"/>
+        <Label Content="Adicionar Item" Grid.Column="1" HorizontalAlignment="Left" Margin="427,30,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="17"/>
+        <Image Source="/Imagens/novavenda.png" Margin="455,58,141,0" Grid.Row="3" Grid.Column="1"/>
+
+        <Label Grid.Row="3" Grid.Column="3" Content="Vender" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Bold" HorizontalAlignment="Left" Width="68"/>
+        <Image Source="/Imagens/vender.png" Height="43" Width="71" HorizontalAlignment="Left" Grid.Column="2" Margin="44,57,0,0" Grid.Row="3"/>
+        <DataGrid x:Name="datagridVenda" Grid.Row="4" Margin="33,164,0,137" Loaded="datagridVenda_Loaded" RenderTransformOrigin="0.501,0.771"/>
+        <Button Content="Excluir Produto" Grid.Column="1" HorizontalAlignment="Left" Margin="145,258,0,0" Grid.Row="4" VerticalAlignment="Top" Height="44" Width="190" Background="#FFD00000" FontWeight="Bold" Foreground="White"/>
+
 
     </Grid>
 </Window>
