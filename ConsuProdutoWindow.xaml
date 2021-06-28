@@ -9,13 +9,15 @@
 
 
     <Grid>
+        
 
-        <Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
             <ColumnDefinition Width="600"/>
             <ColumnDefinition Width ="*"/>
-        </Grid.ColumnDefinitions>
-        <TextBox HorizontalAlignment="Left" Margin="125,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="326"/>
-        <Button Content="Pesquisar" HorizontalAlignment="Left" Margin="477,46,0,0" VerticalAlignment="Top" Width="63" Height="23"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox HorizontalAlignment="Left" Margin="125,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="326"/>
+        <Button Content="Pesquisar     " HorizontalAlignment="Left" Margin="477,46,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
 
         <ComboBox Text="Editar" Grid.Column="1" HorizontalAlignment="Left" Margin="0,116,0,0" VerticalAlignment="Top" Width="139" IsDropDownOpen="True">
             <ComboBoxItem>Alfabética Crescente</ComboBoxItem>
@@ -23,13 +25,25 @@
         </ComboBox>
 
         <Label Content="Ordenar por:" HorizontalAlignment="Left" Margin="0,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.4,0.481" Grid.Column="1"/>
-        <Button Content="Editar" Grid.Column="1" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" Width="68" Height="24"/>
-        <Button Content="Excluir" Grid.Column="1" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Width="68" Height="25"/>
+        <Button Content="Editar" Grid.Column="1" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
+        <Button Content="Excluir     " Grid.Column="1" HorizontalAlignment="Left" Margin="10,301,0,0" VerticalAlignment="Top" Width="100" Height="25"/>
 
         <DataGrid Name="dataGridProdutos" Margin="0,100,31,29" HorizontalAlignment="Right" Width="549" ></DataGrid>
         <ScrollBar HorizontalAlignment="Left" Margin="569,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.179,-0.721" Height="305"/>
+        <Image Margin="54,361,33,19" Stretch="Fill" Source="Imagens/png loja.png" Grid.Column="1"/>
+        <Image Margin="547,50,31,365" Stretch="Fill" Source="Imagens/consultar.png" RenderTransformOrigin="0.8,0.517">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-13.2"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="83,307,100,114" Stretch="Fill" Source="Imagens/botao-excluir.png" Grid.Column="1" RenderTransformOrigin="1.906,0.172"/>
 
-
+      
 
     </Grid>
 

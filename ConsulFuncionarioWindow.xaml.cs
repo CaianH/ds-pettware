@@ -27,22 +27,25 @@ namespace PETTWARE
         {
             List<Funcionarios> listaFuncionarios = new List<Funcionarios>();
 
-            for (int i = 0; i < 50; i++)
+            for (int i = 1; i < 50; i++)
             {
                 listaFuncionarios.Add(new Funcionarios()
                 {
 
                     Nome = "Fulano" + i,
-                    Telefone = 69984107407 + 11,
+                    Telefone = 69984107407 + i,
                     Codigo = 456 * i,
-                    CPF = 03206474205 + 11,
-                    RG = 1234567 + 11,
+                    CPF = 03206474205 + i,
+                    RG = 1234567 + i,
                     Email = "Fulano" + i + "@gmail.com"                  
 
                 });
 
             }
 
+
+
+            dataGridFuncionarios.ItemsSource = listaFuncionarios;
 
         }
     }
