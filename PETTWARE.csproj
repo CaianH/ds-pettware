@@ -13,15 +13,13 @@
     <None Remove="Imagens\editar.png" />
     <None Remove="Imagens\icone salvar.png" />
     <None Remove="Imagens\iconeadicionar.png" />
+    <None Remove="Imagens\novavenda.png" />
     <None Remove="Imagens\png loja.png" />
     <None Remove="Imagens\vender +.png" />
     <None Remove="Imagens\vender.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Imagens\adicionar.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Imagens\botao-excluir.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -37,10 +35,10 @@
     <Content Include="Imagens\iconeadicionar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Imagens\png loja.png">
+    <Content Include="Imagens\novavenda.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Imagens\vender +.png">
+    <Content Include="Imagens\png loja.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\vender.png">

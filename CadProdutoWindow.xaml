@@ -14,21 +14,24 @@
         <Label Content="Preço com Desconto" HorizontalAlignment="Left" Margin="50,501,0,0" VerticalAlignment="Top" Height="73" Width="342" FontSize="35"/>
         <Label Content="Quantidade em estoque" HorizontalAlignment="Left" Margin="50,642,0,0" VerticalAlignment="Top" Height="73" Width="396" FontSize="35"/>
         <Button Content="Adicionar" HorizontalAlignment="Left" Margin="50,814,0,0" VerticalAlignment="Top" FontSize="35" Height="67" Width="192"/>
-        <Button Content="Consultar Produto" HorizontalAlignment="Left" Margin="50,943,0,0" VerticalAlignment="Top" FontSize="35" Height="67" Width="357"/>
+        <Button Content="Consultar Produto    " HorizontalAlignment="Left" Margin="50,943,0,0" VerticalAlignment="Top" FontSize="35" Height="67" Width="357"/>
 
-        <Image Source="/Imagens/consultar.png" Margin="329,371,537,70" RenderTransformOrigin="0.5,0.5" Width="20" Height="17"/>
-        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="1121,901,0,0" VerticalAlignment="Top" FontSize="35" Height="67" Width="173"/>
-        <Button Content="Salvar" HorizontalAlignment="Left" Margin="1468,901,0,0" VerticalAlignment="Top" FontSize="35" Click="Button_Click" Height="67" Width="124"/>
+        <Image Source="/Imagens/consultar.png" Margin="358,968,1532,66" RenderTransformOrigin="0.5,0.5" Width="35" Height="35"/>
+        <Button Content="    Cancelar" HorizontalAlignment="Left" Margin="1121,901,0,0" VerticalAlignment="Top" FontSize="35" Height="67" Width="185"/>
+        <Button Content="    Salvar" HorizontalAlignment="Left" Margin="1398,901,0,0" VerticalAlignment="Top" FontSize="35" Click="Button_Click" Height="67" Width="144"/>
         <TextBox HorizontalAlignment="Left" Margin="508,234,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Height="51" FontSize="35"/>
         <TextBox HorizontalAlignment="Left" Margin="508,375,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Height="51" FontSize="35"/>
         <TextBox HorizontalAlignment="Left" Margin="508,516,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Height="51" FontSize="35"/>
         <TextBox HorizontalAlignment="Left" Margin="508,656,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Height="50"/>
-        <Button HorizontalAlignment="Left" Margin="1365,361,0,0" VerticalAlignment="Top" Height="56" Width="114">
+        <Button HorizontalAlignment="Left" Margin="1445,612,0,0" VerticalAlignment="Top" Height="56" Width="114">
             <Image Height="50" Stretch="Fill" Source="pack://siteoforigin:,,,/Image1.png" Width="110"/>
         </Button>
         <TextBlock HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="1920" Height="21" Background="#FF5C687D"/>
         <TextBlock HorizontalAlignment="Left" Margin="222,102,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="206"/>
-        <Image Source="/Imagens/adicionar.png" Width="40" Margin="1402,-144,478,142"/>
+        <Image Source="/Imagens/adicionar.png" Width="40" Margin="1482,108,398,-110"/>
+        <Image Source="/Imagens/png loja.png" Width="200" Margin="1710,457,10,-457"/>
+        <Image Source="/Imagens/botao-excluir.png" Margin="1130,921,759,113" Width="30.9" Height="30"/>
+        <Image Source="/Imagens/icone salvar.png" Width="35" Height="40" Margin="1403,918,482,106"/>
 
     </Grid>
 </Window>
