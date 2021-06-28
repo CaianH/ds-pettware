@@ -24,7 +24,9 @@
         <Label Content="Número:" HorizontalAlignment="Left" Margin="1333,623,0,0" VerticalAlignment="Top" Height="68" Width="151" FontSize="35"/>
         <Button Content="Adicionar" HorizontalAlignment="Left" Margin="40,838,0,0" VerticalAlignment="Top" Height="53" Width="146" FontSize="33"/>
         <Button Content="Consultar Cliente        " HorizontalAlignment="Left" Margin="40,913,0,0" VerticalAlignment="Top" Height="53" Width="325" FontSize="35"/>
+        <Image Source="/Imagens/png loja.png" Width="200" Margin="1710,457,10,-457"/>
         <Image Source="/Imagens/consultar.png" Margin="308,922,1572,102" RenderTransformOrigin="0.5,0.5" Width="40" Height="40" >
+
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="1"/>
@@ -33,9 +35,10 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Image.RenderTransform>
+
         </Image>
-        <Button Content="    Salvar" HorizontalAlignment="Left" Margin="1638,876,0,0" VerticalAlignment="Top" Click="Button_Click_2" Height="53" Width="140" FontSize="35"/>
-        <Button Content="    Cancelar" HorizontalAlignment="Left" Margin="1405,875,0,0" VerticalAlignment="Top" Height="53" Width="188" FontSize="35"/>
+        <Button Content="    Salvar" HorizontalAlignment="Left" Margin="1638,856,0,0" VerticalAlignment="Top" Click="Button_Click_2" Height="53" Width="140" FontSize="35"/>
+        <Button Content="    Cancelar" HorizontalAlignment="Left" Margin="1405,855,0,0" VerticalAlignment="Top" Height="53" Width="188" FontSize="35"/>
         <TextBlock HorizontalAlignment="Left" Margin="882,506,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="619" Height="5" Background="Gray">
             <TextBlock.RenderTransform>
                 <TransformGroup>
@@ -58,6 +61,8 @@
         <TextBox HorizontalAlignment="Left" Margin="1511,530,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="291" Height="48" FontSize="35"/>
         <TextBox HorizontalAlignment="Left" Margin="1511,631,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="175" Height="47"/>
         <DatePicker HorizontalAlignment="Left" Margin="380,480,0,0" VerticalAlignment="Top" Width="258" FontSize="25"/>
+        <Image Source="/Imagens/icone salvar.png" Width="40" Margin="1642,867,238,162" Height="35"/>
+        <Image Source="/Imagens/botao-excluir.png" Margin="1414,863,476,166" Width="30"/>
 
 
     </Grid>
