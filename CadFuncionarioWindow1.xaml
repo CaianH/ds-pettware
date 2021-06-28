@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE"
         mc:Ignorable="d"
-        Title="Cadastrar Funcionário" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="Cadastrar Funcionário" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" Height="1080" Width="1920 ">
     <Grid>
         <TextBlock HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="800" Height="21" Background="#FF5C687D"/>
         <Label Content="Código" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" FontSize="20"/>
@@ -23,7 +23,8 @@
         <Label Content="Rua" HorizontalAlignment="Left" Margin="520,230,0,0" VerticalAlignment="Top"/>
         <Label Content="Número" HorizontalAlignment="Left" Margin="520,280,0,0" VerticalAlignment="Top"/>
         <Button Content="Adicionar " HorizontalAlignment="Left" Margin="292,341,0,0" VerticalAlignment="Top"/>
-        <Button Content="Consultar Cliente" HorizontalAlignment="Left" Margin="363,341,0,0" VerticalAlignment="Top"/>
+        <Button Content="Consultar Funcionário" HorizontalAlignment="Left" Margin="363,341,0,0" VerticalAlignment="Top"/>
+        <Image Source="/Imagens/consultar.png" Margin="329,371,537,70" RenderTransformOrigin="0.5,0.5" Width="20" Height="17"/>
         <Button Content="Salvar" HorizontalAlignment="Left" Margin="633,353,0,0" VerticalAlignment="Top" Click="Button_Click"/>
         <Button Content="Cancelar" HorizontalAlignment="Left" Margin="546,356,0,0" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="348,212,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="230" Height="2" Background="Gray">
