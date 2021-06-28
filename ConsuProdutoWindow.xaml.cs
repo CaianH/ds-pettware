@@ -40,6 +40,7 @@ namespace PETTWARE
                     PrecoComDesconto = 10 * i,
                     QtdEmEstoque = 3 * i,
                     Codigo = 09876 * i
+        
 
                 });
 
