@@ -36,9 +36,9 @@
 
 
                 <!--___________CONSULTAS___________-->
-                <MenuItem Header="Consultar" Click="Caixa_Click">
-                    <MenuItem Header="Produto"/>
-                    <MenuItem Header="Caixa"/>
+                <MenuItem Header="Consultar" Click="Consultar_Click">
+                    <MenuItem Header="Produto" Click="Produto_Click"/>
+                    <MenuItem Header="Caixa" Click="ConsuCaixa_Click"/>
                 </MenuItem>
                 <!--___________CONSULTAS___________-->
 
