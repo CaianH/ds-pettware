@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE"
         mc:Ignorable="d"
-        Title="CadFornecedorWindow" Height="450" Width="834"  MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFF5F3F4">
+        Title="CadFornecedorWindow" Height="450" Width="834"  Background="#FFF5F3F4">
     <Grid>
 
 
@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="117"/>
+            <ColumnDefinition Width="117" />
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="117"/>
@@ -29,7 +29,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="0">
-            <Label Content="Código" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
+            <Label Content="Código" Margin="25 50 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
             <Label Content="Nome" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
             <Label Content="CPF" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
             <Label Content="RG" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
@@ -38,16 +38,17 @@
 
 
         <StackPanel Grid.Row="1" Grid.Column="1">
-            <TextBox  Width="84" Height="30" Margin="5 12 0 0"  Background="#D6D6D6" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
-            <TextBox  Width="190" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
-            <TextBox  Width="190" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
-            <TextBox  Width="190" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
-            <TextBox  Width="190" Height="25" Margin="5 14 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="84" Height="30" Margin="5 50 0 0"  Background="#D6D6D6" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="180" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="180" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left" Text="    _ _ _ . _ _ _ . _ _ _ -_ _"/>
+            <TextBox  Width="180" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left" Text="    _ _ . _ _ _. _ _ _- _ _"/>
+            <TextBox  Width="180" Height="25" Margin="5 19 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left" Text="   ( _ _ ) _  _ _ _ _ - _ _ _ _"/>
+
         </StackPanel>
 
 
         <StackPanel Grid.Row="1" Grid.Column="3">
-            <Label Content="UF" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
+            <Label Content="UF" Margin="25 50 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
             <Label Content="CEP" Margin="25 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
             <Label Content="Bairro" Margin="2 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
             <Label Content="Logradouro" Margin="2 10 0 0" FontFamily="Arial" FontSize="17" FontWeight="Normal" HorizontalAlignment="Right"/>
@@ -55,12 +56,41 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="5">
-            <ComboBox Width="90" Height="25" Margin="5 12 0 0"   Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
-            <TextBox  Width="190" Height="25" Margin="5 12 0 0"   Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
-            <TextBox  Width="190" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
-            <TextBox  Width="190" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
-            <TextBox  Width="190" Height="25" Margin="5 14 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <ComboBox Width="90" Height="25" Margin="5 50 0 0"   Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="180" Height="25" Margin="5 12 0 0"   Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left" Text="    _ _ _ _ _ - _ _ _"/>
+            <TextBox  Width="180" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="180" Height="25" Margin="5 12 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
+            <TextBox  Width="180" Height="25" Margin="5 19 0 0" Background="White" BorderBrush="#FF666666" HorizontalAlignment="Left"/>
         </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="1"  >
+            <Grid Background="#FF666666" Height="250" Width="1" VerticalAlignment="Center" Margin="5,30,5,0"/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Column="2" Grid.Row="2"  >
+            <Button Content="Salvar"  HorizontalAlignment="Left"   Width="80" Height="25" Margin="5 5" Background="#2B9348" FontWeight="Medium" Foreground="White" HorizontalContentAlignment="Left"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="2" >
+            <Button Content="Excluir"  HorizontalAlignment="Right"   Width="80" Height="25" Margin="5 5" Background=" #D00000" FontWeight="Medium" Foreground="White" HorizontalContentAlignment="Left"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="0" Grid.Row="2" >
+            <Button Content="Adicionar"  HorizontalAlignment="Center"   Width="80" Height="25" Margin="15 15" Background="#D6D6D6" FontWeight="Medium" HorizontalContentAlignment="Left" />
+        </StackPanel>
+        
+        <StackPanel Grid.Column="1" Grid.Row="2" >
+            <Button Content="Consultar"  HorizontalAlignment="Left" Width="80" Height="25" Margin="15 15" Background="#D6D6D6" FontWeight="Medium" HorizontalContentAlignment="Left" />
+        </StackPanel>
+
+
+
+
+
+
+
+
 
 
     </Grid>
