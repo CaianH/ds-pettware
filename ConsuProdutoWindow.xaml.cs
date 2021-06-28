@@ -28,13 +28,13 @@ namespace PETTWARE
 
             List<Produtos> listaProdutos = new List<Produtos>();
 
-            for (int i = 0; i < 50; i++)
+            for (int i = 1; i < 50; i++)
             {
                 listaProdutos.Add(new Produtos()
                 {
 
-                    Nome = "Fulano" + i,
-                    Marca = "Marca1" + i,
+                    Nome = "Produto" + i,
+                    Marca = "Marca" + i,
                     Peso = 30 * i,
                     Preco = 20 * i,
                     PrecoComDesconto = 10 * i,
