@@ -10,6 +10,7 @@
     <None Remove="Imagens\adicionar.png" />
     <None Remove="Imagens\botao-excluir.png" />
     <None Remove="Imagens\consultar.png" />
+    <None Remove="Imagens\editar.png" />
     <None Remove="Imagens\icone salvar.png" />
     <None Remove="Imagens\png loja.png" />
     <None Remove="Imagens\vender +.png" />
@@ -24,6 +25,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\consultar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagens\editar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\icone salvar.png">
