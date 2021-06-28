@@ -30,11 +30,24 @@
 
         <StackPanel Grid.Row="1" Grid.Column="0">
             <Label Content="Nome do Cliente" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
-            <TextBox Text="" Margin="30 0 0 0" TextWrapping="Wrap" Width="272" Background="White" HorizontalAlignment="Left" Height="25"/>
+            <TextBox Text="João Teixeira" Margin="30 0 0 0" TextWrapping="Wrap" Width="272" Background="White" HorizontalAlignment="Left" Height="25" FontSize="17"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1">
             <Label Content="Forma de Pagamento" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
-            <ComboBox Width="221" Margin="35 0 0 0" HorizontalAlignment="Left" Background="White" BorderBrush="White" Height="25"/>
+            <ComboBox Width="221" Margin="35 0 0 0" HorizontalAlignment="Left" Background="White" BorderBrush="White" Height="25">
+                <ComboBoxItem>
+                    <TextBlock Text="3X no Cartão"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="2X no Cartão"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="1X no Cartão"/>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <TextBlock Text="Ávista"/>
+                </ComboBoxItem>
+            </ComboBox>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="2">
             <Label Content="Dia da Compra" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
@@ -53,7 +66,7 @@
             <Label Content="Quantidade" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
             <TextBox Text="" Margin="35 0 0 0" TextWrapping="Wrap" Width="63" Background="White" HorizontalAlignment="Left" Height="25"/>
         </StackPanel>
-        <Image Source="/Imagens/consultar.png" Height="30" VerticalAlignment="Top" Margin="15,60,625,0" Grid.Row="3" RenderTransformOrigin="0.51,2.646" Grid.ColumnSpan="2"/>
+        <Image Source="/Imagens/consultar.png" Height="30" VerticalAlignment="Top" Margin="296,60,285,0" Grid.Row="3" RenderTransformOrigin="0.51,2.646"/>
 
     </Grid>
 </Window>
