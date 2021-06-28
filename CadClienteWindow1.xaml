@@ -23,7 +23,17 @@
         <Label Content="Rua:" HorizontalAlignment="Left" Margin="520,239,0,0" VerticalAlignment="Top"/>
         <Label Content="Número:" HorizontalAlignment="Left" Margin="520,278,0,0" VerticalAlignment="Top"/>
         <Button Content="Adicionar" HorizontalAlignment="Left" Margin="231,333,0,0" VerticalAlignment="Top"/>
-        <Button Content="Consultar Cliente" HorizontalAlignment="Left" Margin="231,369,0,0" VerticalAlignment="Top"/>
+        <Button Content="Consultar Cliente        " HorizontalAlignment="Left" Margin="231,369,0,0" VerticalAlignment="Top" />
+        <Image Source="/Imagens/consultar.png" Margin="329,371,537,70" RenderTransformOrigin="0.5,0.5" Width="20" Height="17" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
         <Button Content="Salvar" HorizontalAlignment="Left" Margin="633,353,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
         <Button Content="Cancelar" HorizontalAlignment="Left" Margin="546,356,0,0" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="348,212,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="230" Height="2" Background="Gray">

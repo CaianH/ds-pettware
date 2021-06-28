@@ -14,6 +14,7 @@
         <Label Content="Quantidade em estoque" HorizontalAlignment="Left" Margin="50,280,0,0" VerticalAlignment="Top"/>
         <Button Content="Adicionar" HorizontalAlignment="Left" Margin="50,341,0,0" VerticalAlignment="Top" FontSize="15"/>
         <Button Content="Consultar Produto" HorizontalAlignment="Left" Margin="50,387,0,0" VerticalAlignment="Top" FontSize="15"/>
+        <Image Source="/Imagens/consultar.png" Margin="329,371,537,70" RenderTransformOrigin="0.5,0.5" Width="20" Height="17"/>
         <Button Content="Cancelar" HorizontalAlignment="Left" Margin="424,372,0,0" VerticalAlignment="Top" FontSize="15"/>
         <Button Content="Salvar" HorizontalAlignment="Left" Margin="545,372,0,0" VerticalAlignment="Top" FontSize="15" Click="Button_Click"/>
         <TextBox HorizontalAlignment="Left" Margin="210,85,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
