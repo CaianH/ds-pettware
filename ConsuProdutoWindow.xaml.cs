@@ -47,13 +47,10 @@ namespace PETTWARE
 
             }
 
-
-
-
-
             dataGridProdutos.ItemsSource = listaProdutos;
 
 
         }
+
     }
 }
