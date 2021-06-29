@@ -15,8 +15,8 @@
         <TextBox HorizontalAlignment="Left" Margin="467,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
         <Button Content="Pesquisar" Grid.Column="1" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Width="67"/>
 
-        <DataGrid Name="dataGridFuncionarios" Margin="0,101,10,28" HorizontalAlignment="Right" Width="549" ></DataGrid>
-        
+        <DataGrid Name="dataGridFuncionarios" Margin="0,101,0,28" HorizontalAlignment="Center" Width="549" ></DataGrid>
+
         <ComboBox HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1">
             <ComboBoxItem>Alfabética Crescente</ComboBoxItem>
             <ComboBoxItem>Alfabética Decrescente</ComboBoxItem>
@@ -25,6 +25,7 @@
         <Label Content="Ordenar por:" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.4,0.481" Grid.Column="1"/>
         <Button Content="Editar" Grid.Column="1" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" Width="68" Height="24"/>
         <Button Content="Excluir" Grid.Column="1" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Width="68" Height="25"/>
+        <ScrollBar HorizontalAlignment="Left" Margin="573,101,0,0" VerticalAlignment="Top" Height="305"/>
 
     </Grid>
 </Window>
