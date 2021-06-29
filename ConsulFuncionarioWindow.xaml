@@ -5,27 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE"
         mc:Ignorable="d"
-        Title="Consultar Funcionario" Height="450" Width="800">
+       Title="Consultar Funcionário" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFF5F3F4">
+
+
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="600"/>
-            <ColumnDefinition Width ="*"/>
+            <ColumnDefinition Width="1000"/>
+            <ColumnDefinition Width ="233"/>
+            <ColumnDefinition Width="225"/>
         </Grid.ColumnDefinitions>
 
-        <TextBox HorizontalAlignment="Left" Margin="467,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133"/>
-        <Button Content="Pesquisar" Grid.Column="1" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Width="67"/>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
+            <Border BorderThickness="1" BorderBrush="#FF5C677D" Height="19" Width="1922" Background="#FF5C677D"/>
+        </StackPanel>
 
-        <DataGrid Name="dataGridFuncionarios" Margin="0,101,0,28" HorizontalAlignment="Center" Width="549" ></DataGrid>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,466,0">
+            <TextBox Height="28" Width="664" />
+        </StackPanel>
 
-        <ComboBox HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1">
-            <ComboBoxItem>Alfabética Crescente</ComboBoxItem>
-            <ComboBoxItem>Alfabética Decrescente</ComboBoxItem>
-        </ComboBox>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,466,0"/>
 
-        <Label Content="Ordenar por:" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.4,0.481" Grid.Column="1"/>
-        <Button Content="Editar" Grid.Column="1" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" Width="68" Height="24"/>
-        <Button Content="Excluir" Grid.Column="1" HorizontalAlignment="Left" Margin="10,355,0,0" VerticalAlignment="Top" Width="68" Height="25"/>
-        <ScrollBar HorizontalAlignment="Left" Margin="573,101,0,0" VerticalAlignment="Top" Height="305"/>
+        <Button Margin="856,42,40,10" Grid.Column="0" Grid.RowSpan="2">
+            <StackPanel  Orientation="Horizontal">
+                <Image Source="/Imagens/consultar.png" Width="28" />
+                <TextBlock FontSize="14" Padding="10"><Run Text="Pesquisar"/></TextBlock>
+            </StackPanel>
+        </Button>
 
+        <StackPanel Grid.Row="3" Grid.Column="0" Margin="0,0,466,32" Grid.ColumnSpan="2" >
+            <DataGrid x:Name="dataGridFuncionarios" Width="651" Height="462"/>
+        </StackPanel>
+
+        <StackPanel Grid.ColumnSpan="2" Margin="0,0,466,0" />
+
+        <Button Margin="28,436,71,124" Grid.Row="3" Grid.Column="1" Height="40"  Width="120" >
+            <StackPanel  Orientation="Horizontal">
+                <Image Source="/Imagens/editar.png" Width="28" />
+                <TextBlock FontSize="14" Padding="10"><Run Text="Pesquisar"/></TextBlock>
+            </StackPanel>
+        </Button>
+
+        <Button Margin="837,436,21,124"  Height="40"  Width="120" Grid.Row="3" Grid.Column="0" Background="#FFD00000" >
+            <StackPanel  Orientation="Horizontal">
+                <Image Source="/Imagens/cancelarExcluir.png" Width="28" />
+                <TextBlock FontSize="14" Padding="10"><Run Text="Excluir"/></TextBlock>
+            </StackPanel>
+        </Button>
+        <Image Source="/Imagens/png loja.png" Grid.Row="3" Margin="7,540,882,10"/>
     </Grid>
 </Window>
