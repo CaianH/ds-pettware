@@ -16,6 +16,7 @@
     <None Remove="Imagens\iconeadicionar.png" />
     <None Remove="Imagens\novavenda.png" />
     <None Remove="Imagens\png loja.png" />
+    <None Remove="Imagens\salvar.png" />
     <None Remove="Imagens\vender +.png" />
     <None Remove="Imagens\vender.png" />
   </ItemGroup>
@@ -30,9 +31,6 @@
     <Content Include="Imagens\editar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Imagens\icone salvar.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Imagens\iconeadicionar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -40,6 +38,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\png loja.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagens\salvar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\vender.png">
