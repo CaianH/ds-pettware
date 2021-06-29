@@ -43,8 +43,6 @@ namespace PETTWARE
 
             }
 
-
-
             dataGridFuncionarios.ItemsSource = listaFuncionarios;
 
         }
