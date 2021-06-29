@@ -52,12 +52,13 @@
             <Button Content="Editar" Height="33"  Width="120"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="17,0,0,-600"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Grid.Column="1">
-            <Button Content="Excluir" Height="33"  Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="17,0,0,-725" BorderThickness="1,1,1,1" Background="#FFD00000"/>
-        </StackPanel>
+
+        <Button Content="Excluir" Height="33"  Width="120" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,341,0,0" BorderThickness="1,1,1,1" Background="#FFD00000" Grid.Column="1" Grid.Row="3"/>
+
 
         <Image Source="/Imagens/consultar.png" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Margin="0,7,16,25" Width="28"/>
         <Image Source="/Imagens/editar.png" Grid.Row="3" Grid.Column="1" Margin="100,293,793,293" RenderTransformOrigin="0.515,0.609"/>
-        <Image Source="/Imagens/botao-excluir.png" Grid.Row="3" Grid.Column="1" Margin="101,355,797,228"/>
+        <Image Source="/Imagens/cancelarExcluir.png" Margin="106,348,800,233" Grid.Row="3" RenderTransformOrigin="0.243,0.302" Grid.Column="1"/>
+        <Image Source="/Imagens/png loja.png" Grid.Row="3" Margin="771,518,36,32" Grid.Column="1"/>
     </Grid>
 </Window>
