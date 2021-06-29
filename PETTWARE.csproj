@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="Imagens\adicionar.png" />
     <None Remove="Imagens\botao-excluir.png" />
+    <None Remove="Imagens\cancelarExcluir.png" />
     <None Remove="Imagens\consultar.png" />
     <None Remove="Imagens\editar.png" />
     <None Remove="Imagens\icone salvar.png" />
@@ -20,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Imagens\botao-excluir.png">
+    <Content Include="Imagens\cancelarExcluir.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\consultar.png">
