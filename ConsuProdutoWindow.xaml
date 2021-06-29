@@ -1,0 +1,65 @@
+﻿<Window x:Class="PETTWARE.ConsuProdutoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PETTWARE"
+        mc:Ignorable="d"
+        Title="Consultar Produto" Height="1080" Width="1920" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFF5F3F4">
+
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="600"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1000"/>
+            <ColumnDefinition Width ="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
+            <Border BorderThickness="1" BorderBrush="#FF5C677D" Height="19" Width="1922" Background="#FF5C677D"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <TextBox Height="28" Width="664" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Button Content="Pesquisar" Width="125" HorizontalAlignment="Right" Height="31"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <Label Content="Ordenar Por:" HorizontalAlignment="Center"/>
+            <ComboBox Width="120">
+                <ComboBoxItem Width="120">Alfabética Crescente</ComboBoxItem>
+                <ComboBoxItem Width="120">Alfabética Decrescente</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Height="914" >
+            <DataGrid x:Name="dataGridProdutos" Width="778" Height="660"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <Button Content="Editar" Height="33"  Width="120"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="17,0,0,-600"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1">
+            <Button Content="Excluir" Height="33"  Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="17,0,0,-725" BorderThickness="1,1,1,1" Background="#FFD00000"/>
+        </StackPanel>
+
+        <Image Source="/Imagens/consultar.png" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Margin="0,7,16,25" Width="28"/>
+        <Image Source="/Imagens/editar.png" Grid.Row="3" Grid.Column="1" Margin="100,293,793,293" RenderTransformOrigin="0.515,0.609"/>
+        <Image Source="/Imagens/botao-excluir.png" Grid.Row="3" Grid.Column="1" Margin="101,355,797,228"/>
+    </Grid>
+
+
+</Window>

@@ -80,11 +80,27 @@ namespace PETTWARE
             CadTiposDespesasWindow TipoDespesa = new CadTiposDespesasWindow();
             TipoDespesa.ShowDialog();
         }
+        private void Consultar_Click(object sender, RoutedEventArgs e)
+        {
 
-        private void Caixa_Click(object sender, RoutedEventArgs e)
+        }
+
+        private void Produto_Click(object sender, RoutedEventArgs e)
+        {
+            ConsuProdutoWindow ConsuProduto = new ConsuProdutoWindow();
+            ConsuProduto.ShowDialog();
+        }
+
+        private void ConsuCaixa_Click(object sender, RoutedEventArgs e)
         {
             ConsulCaixaWindow Caixa = new ConsulCaixaWindow();
             Caixa.ShowDialog();
+        }
+
+        private void ConsuFuncionario(object sender, RoutedEventArgs e)
+        {
+            ConsulFuncionarioWindow ConsuFuncionario = new ConsulFuncionarioWindow();
+            ConsuFuncionario.ShowDialog();
         }
     }
 }

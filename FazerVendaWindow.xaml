@@ -6,19 +6,81 @@
         xmlns:local="clr-namespace:PETTWARE"
         xmlns:wpftool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
-        Title="Vender" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="Vender" Height="1080" Width="1920" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFF5F3F4">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
-            <Label Content="Nome do Cliente"/>
-            <TextBox Text="TextBox" TextWrapping="Wrap" Width="120" Margin="20"/>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="640"/>
+            <ColumnDefinition Width="640"/>
+            <ColumnDefinition Width="640"/>
+
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
+            <Border BorderThickness="1" BorderBrush="#FF5C677D" Height="40" Width="1922" Background="#FF5C677D"/>
 
         </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Label Content="Nome do Cliente" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <TextBox Text="João Teixeira" Margin="30 0 0 0" TextWrapping="Wrap" Width="272" Background="White" HorizontalAlignment="Left" Height="25" FontSize="17"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Label Content="Forma de Pagamento" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <ComboBox Width="221" Margin="35 0 0 0" HorizontalAlignment="Left" Background="White" BorderBrush="White" Height="25">
+                <ComboBoxItem>3X NO CARTÃO</ComboBoxItem>
+                <ComboBoxItem>2X NO CARTÃO</ComboBoxItem>
+                <ComboBoxItem>ÁVISTA</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <Label Content="Dia da Compra" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <DatePicker Width="171" Margin="35 0 0 0" HorizontalAlignment="Left"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <Label Content="Nome do Funcionário/a" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <ComboBox Margin="30 0 0 0" Width="271" Background="White" BorderBrush="White" Height="25" FontSize="15" HorizontalAlignment="Left">
+                <ComboBoxItem Content="Thor"/>
+                <ComboBoxItem Content="Peter"/>
+                <ComboBoxItem Content="Groot"/>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="0">
+            <Label Content="Buscar Produto / Serviço" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <ComboBox Width="272" Margin="30 0 0 0" HorizontalAlignment="Left" Background="White" BorderBrush="White" Height="25" FontSize="15">
+                <ComboBoxItem Content="Ração 12KG"/>
+                <ComboBoxItem Content="Coleira"/>
+                <ComboBoxItem Content="Shampoo"/>
+            </ComboBox>
+
+        </StackPanel>
+        <StackPanel Grid.Row="3" Grid.Column="1" Margin="0,0,408,0">
+            <Label Content="Quantidade" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Normal" HorizontalAlignment="Left"/>
+            <TextBox Text="" Margin="35 0 0 0" TextWrapping="Wrap" Width="63" Background="White" HorizontalAlignment="Left" Height="25"/>
+        </StackPanel>
+        <Image Source="/Imagens/consultar.png" Height="30" VerticalAlignment="Top" Margin="296,60,285,0" Grid.Row="3" RenderTransformOrigin="0.51,2.646"/>
+        <Image Source="/Imagens/iconeadicionar.png" Margin="106,65,490,10" Grid.Row="3" Grid.Column="1"/>
+        <Label Content="Adicionar Item" Grid.Column="1" HorizontalAlignment="Left" Margin="427,30,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="17"/>
+        <Image Source="/Imagens/novavenda.png" Margin="455,58,141,0" Grid.Row="3" Grid.Column="1"/>
+
+        <Label Grid.Row="3" Grid.Column="3" Content="Vender" Margin="30 30 0 0" Background="{x:Null}" FontSize="17" FontWeight="Bold" HorizontalAlignment="Left" Width="68"/>
+        <Image Source="/Imagens/vender.png" Height="43" Width="71" HorizontalAlignment="Left" Grid.Column="2" Margin="44,57,0,0" Grid.Row="3"/>
+        <DataGrid x:Name="datagridVenda" Grid.Row="4" Margin="33,136,0,165" Loaded="datagridVenda_Loaded" RenderTransformOrigin="0.501,0.771"/>
+        <Button Content="Excluir Produto" Grid.Column="1" HorizontalAlignment="Left" Margin="145,258,0,0" Grid.Row="4" VerticalAlignment="Top" Height="44" Width="190" Background="#FFD00000" FontWeight="Bold" Foreground="White"/>
+
+        <Label Content="Valor Desconto" HorizontalAlignment="Left" Margin="52,391,0,0" Grid.Row="4" VerticalAlignment="Top" FontSize="17" FontWeight="Bold" RenderTransformOrigin="5.555,-2.697"/>
+        <TextBlock HorizontalAlignment="Left" Margin="188,393,0,0" Grid.Row="4" Text="$R 80,00" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="107" Background="White" FontSize="17" FontWeight="Bold" Foreground="#FF0E8618" OpacityMask="Black" RenderTransformOrigin="0.433,-2.231"/>
+        <Label Content="Valor Desconto" HorizontalAlignment="Left" Margin="336,391,0,0" Grid.Row="4" VerticalAlignment="Top" FontSize="17" FontWeight="Bold" RenderTransformOrigin="5.555,-2.697"/>
+        <TextBlock HorizontalAlignment="Left" Margin="472,393,0,0" Grid.Row="4" Text="$R 119,99" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="107" Background="White" FontSize="17" FontWeight="Bold" Foreground="#FF0E8618" OpacityMask="Black" RenderTransformOrigin="0.433,-2.231"/>
+
+        <Image Source="/Imagens/png loja.png" Grid.Column="2" Grid.Row="4" Margin="0,376,327,26"/>
+        <Image Source="/Imagens/cancelarExcluir.png" Height="22" VerticalAlignment="Top" Margin="151,269,451,0" Grid.Row="4" Grid.Column="1"/>
     </Grid>
 </Window>
