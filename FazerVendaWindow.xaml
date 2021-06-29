@@ -23,8 +23,8 @@
 
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
-            <Border BorderThickness="1" BorderBrush="#FF5C677D" Height="40" Width="1922" Background="#FF5C677D"/>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Margin="0,0,0,10">
+            <Border BorderThickness="1" BorderBrush="#FF5C677D" Height="22" Width="1922" Background="#FF5C677D"/>
 
         </StackPanel>
 
