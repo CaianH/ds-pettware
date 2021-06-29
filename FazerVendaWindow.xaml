@@ -81,7 +81,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="472,393,0,0" Grid.Row="4" Text="$R 119,99" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="107" Background="White" FontSize="17" FontWeight="Bold" Foreground="#FF0E8618" OpacityMask="Black" RenderTransformOrigin="0.433,-2.231"/>
 
         <Image Source="/Imagens/png loja.png" Grid.Column="2" Grid.Row="4" Margin="0,376,327,26"/>
-
-
+        <Image Source="/Imagens/cancelarExcluir.png" Height="22" VerticalAlignment="Top" Margin="151,269,451,0" Grid.Row="4" Grid.Column="1"/>
     </Grid>
 </Window>
