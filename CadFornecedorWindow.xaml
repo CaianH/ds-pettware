@@ -28,9 +28,11 @@
         <StackPanel Grid.Row="1" Grid.Column="0">
             <WrapPanel Grid.Row="1" Grid.Column="0" Margin="30 30 0 0" >
 
-                <Label Content="Código" Margin="0 0 10 0" FontSize="17"/>
-                <TextBlock x:Name="txtCod" Text="001" Width="45" FontSize="17" Background="White"/>
-
+                <Label Content="Código" Margin="0 20 10 0" FontSize="17"/>
+                <TextBlock x:Name="txtCod" Text="001" Width="45" Height="30"  FontSize="17" Background="White" Margin="0 0 100 0"/>
+                <StackPanel>
+                    <materialDesign:PackIcon Kind="AccountCircle" Width="100" Height="75" />
+                </StackPanel>
             </WrapPanel>
 
 
