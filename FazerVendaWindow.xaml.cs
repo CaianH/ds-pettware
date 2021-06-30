@@ -44,5 +44,21 @@ namespace PETTWARE
             }
             datagridVenda.ItemsSource = listaProdutos;
         }
+
+        private void Vender_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Venda Concluída com Sucesso!!", "Vender", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void Excluir_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult Result = MessageBox.Show("Deseja Excluir o Produto da lista?", "Confirmação", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            switch (Result)
+            {
+                case MessageBoxResult.Yes:
+                    MessageBox.Show("Produto Excluído com Sucesso!!", "Confirmação", MessageBoxButton.OK, MessageBoxImage.Information);
+                    break;
+            }
+        }
     }
 }

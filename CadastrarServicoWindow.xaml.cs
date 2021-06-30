@@ -21,5 +21,21 @@ namespace PETTWARE
         {
             InitializeComponent();
         }
+
+        private void Salvar_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Serviço Salvo com Sucesso!!", "Cadastrar Serviço",MessageBoxButton.OK,MessageBoxImage.Information);
+        }
+
+        private void Excluir_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult Result = MessageBox.Show("Deseja Excluir Serviço?", "Confirmação", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            switch (Result)
+            {
+                case MessageBoxResult.Yes:
+                    MessageBox.Show("Serviço Excluido com Sucesso!!", "Confirmação", MessageBoxButton.OK, MessageBoxImage.Information);
+                    break;
+            }
+        }
     }
 }
