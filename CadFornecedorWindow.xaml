@@ -113,14 +113,14 @@
             </WrapPanel>
 
             <WrapPanel Margin="30 40 0 0" Grid.Row="1" Grid.Column="2">
-                <Button x:Name="btnSalvar" Margin="0 0 20 0"   Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White">
+                <Button x:Name="btnSalvar" Margin="0 0 20 0"   Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Click="bntSalvar_Click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="0 5 20 0" Text="Salvar" FontSize="17" FontWeight="Bold"/>
                         <Image Source="/Imagens/salvar.png"/>
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="btnExcluir" Margin="0 0 20 0"  Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White">
+                <Button x:Name="btnExcluir" Margin="0 0 20 0"  Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Click="bntExcluir_Click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="0 5 20 0" Text="Excluir" FontSize="17" FontWeight="Bold"/>
                         <Image Source="/Imagens/cancelarExcluir.png"/>
@@ -136,7 +136,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" >
-            <Grid Background="#D6D6D6" Height="300" Width="1" VerticalAlignment="Center" Margin="0,50,0,0" Cursor="Hand"/>
+            <Grid Background="#D6D6D6" Height="300" Width="1" VerticalAlignment="Center" Margin="0,25,0,0"/>
         </StackPanel>
            
 

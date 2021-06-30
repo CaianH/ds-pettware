@@ -22,12 +22,13 @@ namespace PETTWARE
             InitializeComponent();
         }
 
-        private void btnSalvar_Click(object sender, RoutedEventArgs e)
+
+        private void bntSalvar_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Cadastro Salvo com Sucesso!", "Cadastrar Fornecedores", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        private void btnExcluir_Click(object sender, RoutedEventArgs e)
+        private void bntExcluir_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult Result = MessageBox.Show("Deseja excluir este Fornecedor?", "Confirmação", MessageBoxButton.YesNo, MessageBoxImage.Question);
             switch (Result)
@@ -36,16 +37,9 @@ namespace PETTWARE
                     MessageBox.Show("Fornecedor Excluído com Sucesso!", "Confirmação", MessageBoxButton.OK, MessageBoxImage.Information);
                     break;
             }
+
+            
         }
-
-
-
-
-
-
-
-
-
     }
 
 
