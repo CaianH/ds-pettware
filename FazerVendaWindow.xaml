@@ -69,14 +69,14 @@
                 <TextBox Width="44" Text="1" Margin="0 0 0 0" FontSize="17" />
             </StackPanel>
 
-            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="105" HorizontalAlignment="Left" Background="#FFF5F3F4" Foreground="White" BorderBrush="#FFF5F3F4">
+            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="105" HorizontalAlignment="Left" Background="#FFF5F3F4" Foreground="White" BorderBrush="#FFF5F3F4" Cursor="Hand">
                 <StackPanel >
                     <TextBlock Margin="20 0 0 0" Text="Nova Venda" FontSize="17" FontWeight="Normal" Foreground="Black"/>
                     <Image Source="/Imagens/novavenda.png" Height="61" Width="96"/>
                 </StackPanel>
             </Button>
 
-            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="105" HorizontalAlignment="Left" Background="#FFF5F3F4" Foreground="White" BorderBrush="#FFF5F3F4">
+            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="105" HorizontalAlignment="Left" Background="#FFF5F3F4" Foreground="White" BorderBrush="#FFF5F3F4" Cursor="Hand">
                 <StackPanel >
                     <TextBlock Margin="20 0 0 0" Text="Vender" FontSize="17" FontWeight="Bold" Foreground="Black"/>
                     <Image Source="/Imagens/vender.png" Height="61" Width="96"/>
@@ -86,7 +86,7 @@
 
         <WrapPanel Margin="30 10 0 0" Grid.Row="4" Grid.ColumnSpan="2">
             <DataGrid x:Name="datagridVenda" Height="200" Width="500" Loaded="datagridVenda_Loaded" SelectionChanged="DataGrid_SelectionChanged"/>
-            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White">
+            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Cursor="Hand">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0 5 20 0" Text="Excluir" FontSize="17" FontWeight="Bold"/>
                     <Image Source="/Imagens/cancelarExcluir.png"/>
