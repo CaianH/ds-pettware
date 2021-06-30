@@ -72,7 +72,7 @@ namespace PETTWARE
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void TipoDespesa_Click(object sender, RoutedEventArgs e)
@@ -102,5 +102,6 @@ namespace PETTWARE
             ConsulFuncionarioWindow ConsuFuncionario = new ConsulFuncionarioWindow();
             ConsuFuncionario.ShowDialog();
         }
+
     }
 }

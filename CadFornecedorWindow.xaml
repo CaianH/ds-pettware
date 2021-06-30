@@ -4,17 +4,133 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE"
+        xmlns:wpftool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
-        Title="CadFornecedorWindow" Height="450" Width="800">
+        Title="CadFornecedorWindow" MinHeight="655" MinWidth="1000" WindowState="Maximized">
     <Grid>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+
+        </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="200*"/>
+
         </Grid.ColumnDefinitions>
 
-        
+        <Border Grid.Row="0" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="#FF5C677D" Height="22" Width="1922" Background="#FF5C677D"/>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <WrapPanel Grid.Row="1" Grid.Column="0" Margin="30 30 0 0" >
 
+                <Label Content="Código" Margin="0 0 10 0" FontSize="17"/>
+                <TextBlock Text="001" Width="45" FontSize="17" Background="White"/>
+
+            </WrapPanel>
+
+
+            <WrapPanel Grid.Row="2" Grid.Column="0" Margin="30 30 0 0">
+
+                <Label Content="Nome" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox Text="Maria Oliveira" Width="200" FontSize="17"/>
+
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="3" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="CPF" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox Text=" 000.000.000-00" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="4" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="RG" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox Text=" 00.000.000-00" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="5" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="Telefone" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox Text=" (00) 0 0000-0000" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="30 70 0 0">
+                <Button Margin="0 0 0 0" Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 5 10 0" Text="Adicionar" FontSize="17" FontWeight="Bold"/>
+                        <Image Source="/Imagens/iconeadicionar.png"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Margin="0 20 0 0" Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 5 10 0" Text="Consultar" FontSize="17" FontWeight="Bold"/>
+                        <Image Source="/Imagens/consultar.png"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2">
+
+            <WrapPanel Margin="30 30 0 0" >
+
+                <Label Content="UF" Margin="0 0 10 0" FontSize="17"/>
+                <ComboBox FontSize="17" Width="60">
+                    <ComboBoxItem>RO</ComboBoxItem>
+                    <ComboBoxItem>AC</ComboBoxItem>
+                    <ComboBoxItem>AM</ComboBoxItem>
+                </ComboBox>
+            </WrapPanel>
+
+
+            <WrapPanel  Margin="30 30 0 0">
+
+                <Label Content="CEP" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox Text="00000-000" Width="200" FontSize="17"/>
+
+            </WrapPanel>
+
+            <WrapPanel Margin="30 30 0 0">
+                <Label Content="Bairro" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox Text=" 000.000.000-00" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel  Margin="30 30 0 0">
+                <Label Content="Logradouro" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox Text=" 00.000.000-00" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Margin="30 30 0 0">
+                <Label Content="Número" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox Text=" (00) 0 0000-0000" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Margin="30 40 0 0" Grid.Row="1" Grid.Column="2">
+                <Button Margin="0 0 20 0"   Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 5 20 0" Text="Salvar" FontSize="17" FontWeight="Bold"/>
+                        <Image Source="/Imagens/salvar.png"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Margin="0 0 20 0"  Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 5 20 0" Text="Excluir" FontSize="17" FontWeight="Bold"/>
+                        <Image Source="/Imagens/cancelarExcluir.png"/>
+                    </StackPanel>
+                </Button>
+            </WrapPanel>
+
+ 
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Image Source="/Imagens/png loja.png" Height="75" Width="250" Margin="0 50 0 0"/>
+        </StackPanel>
 
 
 

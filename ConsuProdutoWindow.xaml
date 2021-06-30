@@ -14,52 +14,53 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="600"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1000"/>
-            <ColumnDefinition Width ="*"/>
+            <ColumnDefinition Width ="233"/>
+            <ColumnDefinition Width="225"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
             <Border BorderThickness="1" BorderBrush="#FF5C677D" Height="19" Width="1922" Background="#FF5C677D"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="0">
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,466,0">
             <TextBox Height="28" Width="664" />
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="0">
-            <Button Content="Pesquisar" Width="125" HorizontalAlignment="Right" Height="31"/>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,466,0"/>
+
+        <Button Margin="856,42,40,10" Grid.Column="0" Grid.RowSpan="2">
+            <StackPanel  Orientation="Horizontal">
+                <Image Source="/Imagens/consultar.png" Width="28" />
+                <TextBlock FontSize="14" Padding="10"><Run Text="Pesquisar"/></TextBlock>
+            </StackPanel>
+        </Button>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Margin="13,25,152,138" Grid.RowSpan="2" >
+            <DataGrid x:Name="dataGridProdutos" Width="668" Height="542"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Grid.Column="1">
-            <Label Content="Ordenar Por:" HorizontalAlignment="Center"/>
-            <ComboBox Width="120">
-                <ComboBoxItem Width="120">Alfabética Crescente</ComboBoxItem>
-                <ComboBoxItem Width="120">Alfabética Decrescente</ComboBoxItem>
-            </ComboBox>
-        </StackPanel>
+        <StackPanel Grid.ColumnSpan="2" Margin="0,0,466,0" />
 
-        <StackPanel Grid.Row="3" Grid.Column="0" Height="914" >
-            <DataGrid x:Name="dataGridProdutos" Width="778" Height="660"/>
-        </StackPanel>
+        <Button Margin="28,436,71,124" Grid.Row="3" Grid.Column="1" Height="40"  Width="120" >
+            <StackPanel  Orientation="Horizontal">
+                <Image Source="/Imagens/editar.png" Width="28" />
+                <TextBlock FontSize="14" Padding="10"><Run Text="Pesquisar"/></TextBlock>
+            </StackPanel>
+        </Button>
 
-        <StackPanel Grid.Row="3" Grid.Column="1">
-            <Button Content="Editar" Height="33"  Width="120"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="17,0,0,-600"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="3" Grid.Column="1">
-            <Button Content="Excluir" Height="33"  Width="120" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="17,0,0,-725" BorderThickness="1,1,1,1" Background="#FFD00000"/>            
-        </StackPanel>
-
-        <Image Source="/Imagens/consultar.png" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Margin="0,7,16,25" Width="28"/>
-        <Image Source="/Imagens/editar.png" Grid.Row="3" Grid.Column="1" Margin="100,293,793,293" Width="28" HorizontalAlignment="Center" />
-        <Image Source="/Imagens/cancelarExcluir.png" Grid.Row="3" Grid.Column="1" Margin="100,356,793,230" HorizontalAlignment="Center" />
+        <Button Margin="837,436,21,124"  Height="40"  Width="120" Grid.Row="3" Grid.Column="0" Background="#FFD00000" >
+            <StackPanel  Orientation="Horizontal">
+                <Image Source="/Imagens/cancelarExcluir.png" Width="28" />
+                <TextBlock FontSize="14" Padding="10"><Run Text="Excluir"/></TextBlock>
+            </StackPanel>
+        </Button>
+        <Image Source="/Imagens/png loja.png" Grid.Row="3" RenderTransformOrigin="-0.301,-0.149" Margin="13,676,762,14"/>
     </Grid>
-
 
 </Window>
