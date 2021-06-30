@@ -21,17 +21,17 @@
         <WrapPanel Grid.Row="1" Margin="30 45 0 0">
             <StackPanel Height="521">
                 <Label Content="Receita total: " Margin="0 0 10 0" FontSize="17"/>
-                <TextBox Width="400" Text="" Margin="0 0 50 0" FontSize="17" />
+                <TextBlock Width="400" Text="89876" Margin="0 0 60 0" FontSize="17" Background="White"/>
                 <Label Content="Total de vendas: " Margin="0 12 10 0" FontSize="17"/>
-                <TextBox Width="400" Text="" Margin="0 0 50 0" FontSize="17" />
+                <TextBlock Width="400" Text="23" Margin="0 0 60 0" FontSize="17" Background="White"/>
                 <Label Content="Despesas totais: " Margin="0 12 10 0" FontSize="17"/>
-                <TextBox Width="400" Text="" Margin="0 0 50 0" FontSize="17" />
+                <TextBlock Width="400" Text="4.789,50" Margin="0 0 60 0" FontSize="17" Background="White"/>
                 <Label Content="Saldo: " Margin="0 12 10 0" FontSize="17"/>
-                <TextBox Width="400" Text="" Margin="0 0 50 0" FontSize="17" />
+                <TextBlock Width="400" Text="34.800,00" Margin="0 0 60 0" FontSize="17" Background="White"/>
                 <Label Content="Lucro: " Margin="0 12 10 0" FontSize="17"/>
-                <TextBox Width="400" Text="" Margin="0 0 50 0" FontSize="17" />
+                <TextBlock Width="400" Text="8.789,50" Margin="0 0 60 0" FontSize="17" Background="White"/>
                 <Label Content="Débito: " Margin="0 12 10 0" FontSize="17"/>
-                <TextBox Width="400" Text="" Margin="0 0 50 0" FontSize="17" />
+                <TextBlock Width="400" Text="10.000,00" Margin="0 0 60 0" FontSize="17" Background="White"/>
 
 
 
@@ -39,9 +39,9 @@
         </WrapPanel>
 
         <StackPanel Grid.Row="1" Margin="628,388,429,119">
-            <Button Width="169" Height="65">
+            <Button Width="169" Height="65" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock FontSize="17" FontWeight="Bold" Height="51" Width="151"><Run Text="Emitir Relatório"/>
+                    <TextBlock FontSize="17" FontWeight="Bold" Height="51" Width="151" HorizontalAlignment="Center"><Run Text="Emitir Relatório"/>
                         <LineBreak/><Run Text=" de Vendas"/></TextBlock>
 
                 </StackPanel>

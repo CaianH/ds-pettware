@@ -16,9 +16,9 @@
         <Button Content="Adicionar" HorizontalAlignment="Left" Margin="50,814,0,0" VerticalAlignment="Top" FontSize="35" Height="67" Width="192"/>
         <Button Content="Consultar Produto    " HorizontalAlignment="Left" Margin="50,943,0,0" VerticalAlignment="Top" FontSize="35" Height="67" Width="357"/>
 
-        <Image Source="/Imagens/consultar.png" Margin="358,968,1532,66" RenderTransformOrigin="0.5,0.5" Width="35" Height="35"/>
-        <Button Content="    Cancelar" HorizontalAlignment="Left" Margin="1121,901,0,0" VerticalAlignment="Top" FontSize="35" Height="67" Width="185"/>
-        <Button Content="    Salvar" HorizontalAlignment="Left" Margin="1398,901,0,0" VerticalAlignment="Top" FontSize="35" Click="Button_Click" Height="67" Width="144"/>
+        <Image Source="/Imagens/consultar.png" Margin="361,962,1524,67" RenderTransformOrigin="0.5,0.5" Width="35" Height="35"/>
+        <Button Content="    Cancelar" HorizontalAlignment="Left" Margin="1121,901,0,0" VerticalAlignment="Top" FontSize="35" Height="67" Width="206"/>
+        <Button Content="    Salvar" HorizontalAlignment="Left" Margin="1398,901,0,0" VerticalAlignment="Top" FontSize="35" Click="Button_Click" Height="67" Width="168"/>
         <TextBox HorizontalAlignment="Left" Margin="508,234,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Height="51" FontSize="35"/>
         <TextBox HorizontalAlignment="Left" Margin="508,375,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Height="51" FontSize="35"/>
         <TextBox HorizontalAlignment="Left" Margin="508,516,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Height="51" FontSize="35"/>
@@ -30,8 +30,8 @@
         <TextBlock HorizontalAlignment="Left" Margin="222,102,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="206"/>
         <Image Source="/Imagens/adicionar.png" Width="40" Margin="1482,108,398,-110"/>
         <Image Source="/Imagens/png loja.png" Width="200" Margin="1710,457,10,-457"/>
-        <Image Source="/Imagens/botao-excluir.png" Margin="1130,921,759,113" Width="30.9" Height="30"/>
-        <Image Source="/Imagens/icone salvar.png" Width="35" Height="40" Margin="1403,918,482,106"/>
+        <Image Source="/Imagens/cancelarExcluir.png" Margin="1130,921,759,113" Width="30.9" Height="30"/>
+        <Image Source="/Imagens/salvar.png" Width="35" Height="40" Margin="1403,918,482,106"/>
 
     </Grid>
 </Window>

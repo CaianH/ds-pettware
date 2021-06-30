@@ -85,7 +85,7 @@
         </WrapPanel>
 
         <WrapPanel Margin="30 10 0 0" Grid.Row="4" Grid.ColumnSpan="2">
-            <DataGrid x:Name="datagridVenda" Height="200" Width="500" Loaded="datagridVenda_Loaded" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid x:Name="datagridVenda" Height="200" Width="680" Loaded="datagridVenda_Loaded" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
                     <DataGridTextColumn Header="Produto" Binding="{Binding Produto}"/>

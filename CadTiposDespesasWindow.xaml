@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE"
         mc:Ignorable="d"
-        Title="CadTiposDespesasWindow" Height="450" Width="800">
+        Title="Cadastrar tipos de despesas"  Height="550" Width="1000" WindowStartupLocation="CenterScreen"  Background="#FFF5F3F4">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0"  BorderThickness="1" BorderBrush="#FF5C677D" Background="#FF5C677D" />
         
+        <WrapPanel  Grid.Row="1" Margin="30 80 0 0">
+            <Label Content="Código" Margin="0 0 10 0" FontSize="17"/>
+            <TextBlock Text="001" Width="45" FontSize="17" Background="White"/>
+        </WrapPanel>
+
     </Grid>
 </Window>
