@@ -69,7 +69,7 @@
                 <TextBox Width="44" Text="1" Margin="0 0 0 0" FontSize="17" />
             </StackPanel>
 
-            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="105" HorizontalAlignment="Left" Background="#FFF5F3F4" Foreground="White" BorderBrush="#FFF5F3F4" Cursor="Hand">
+            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="165" Height="105" HorizontalAlignment="Left" Background="#FFF5F3F4" Foreground="White" BorderBrush="#FFF5F3F4" Cursor="Hand">
                 <StackPanel >
                     <TextBlock Margin="20 0 0 0" Text="Adicionar Item" FontSize="17" FontWeight="Normal" Foreground="Black"/>
                     <Image Source="/Imagens/novavenda.png" Height="61" Width="96"/>
