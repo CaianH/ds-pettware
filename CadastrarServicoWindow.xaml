@@ -57,14 +57,14 @@
         </StackPanel>
 
         <WrapPanel Grid.Column="0" Margin="30 40 0 0" Grid.Row="4">
-            <Button Margin="0 0 20 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Cursor="Hand">
+            <Button Margin="0 0 20 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Cursor="Hand" Click="Salvar_Click">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0 5 20 0" Text="Salvar" FontSize="17" FontWeight="Bold"/>
                     <Image Source="/Imagens/salvar.png"/>
                 </StackPanel>
             </Button>
 
-            <Button Margin="0 0 500 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Cursor="Hand">
+            <Button Margin="0 0 500 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Cursor="Hand" Click="Excluir_Click">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0 5 20 0" Text="Excluir" FontSize="17" FontWeight="Bold"/>
                     <Image Source="/Imagens/cancelarExcluir.png"/>
