@@ -4,20 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE"
+        xmlns:wpftool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
-        Title="CadFornecedorWindow" Height="450" Width="800">
+        Title="CadFornecedorWindow" MinHeight="550" MinWidth="1000" WindowState="Maximized">
     <Grid>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
 
         
 
-
-
-
-
+        
     </Grid>
 </Window>
