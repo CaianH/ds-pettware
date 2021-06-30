@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PETTWARE"
         xmlns:wpftool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
-        Title="Vender"  MinHeight="550" MinWidth="1000" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFF5F3F4">
+        Title="Vender"  MinHeight="750" MinWidth="1000" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFF5F3F4">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -16,10 +16,16 @@
             <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
-        <Border Grid.Row="0"  BorderThickness="1" BorderBrush="#FF5C677D" Height="22" Width="1922" Background="#FF5C677D"/>
 
-        <WrapPanel Grid.Row="1" Margin="30 15 0 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+            
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0"  BorderThickness="1" BorderBrush="#FF5C677D" Height="22" Width="1922" Background="#FF5C677D" Grid.ColumnSpan="2" Margin="0,2,0,1"/>
+
+        <WrapPanel Grid.Row="1" Margin="30 15 0 0" Grid.ColumnSpan="2">
             <StackPanel Margin="0 0 100 0">
                 <Label Content="Nome do Cliente" Margin="0 0 10 0" FontSize="17"/>
                 <TextBox Width="250" Text="João Teixeira" Margin="0 0 50 0" FontSize="17" />
@@ -38,7 +44,7 @@
             </StackPanel>
         </WrapPanel>
 
-        <StackPanel Grid.Row="2" Margin="30 10 0 0">
+        <StackPanel Grid.Row="2" Margin="30 10 0 0" Grid.ColumnSpan="2">
             <Label Content="Nome do Funcionário" Margin="0 0 10 0" FontSize="17"/>
             <ComboBox Width="250" HorizontalAlignment="Left" FontSize="17">
                 <ComboBoxItem>Thor Odin Son</ComboBoxItem>
@@ -47,13 +53,40 @@
             </ComboBox>
         </StackPanel>
 
-        <WrapPanel Margin="30 10 0 0" Grid.Row="3">
-            
+        <WrapPanel Margin="30 10 0 0" Grid.Row="3" Grid.ColumnSpan="2">
+            <StackPanel>
+                <Label Content="Nome do Funcionário" Margin="0 0 10 0" FontSize="17"/>
+                <ComboBox Width="250" HorizontalAlignment="Left" FontSize="17">
+                    <ComboBoxItem>Thor Odin Son</ComboBoxItem>
+                    <ComboBoxItem>Tony Stark</ComboBoxItem>
+                    <ComboBoxItem>Steve Rogers</ComboBoxItem>
+                </ComboBox>
+
+            </StackPanel>
+
+            <StackPanel Margin="70 0 0 0">
+                <Label Content="Quantidade" Margin="0 0 0 0" FontSize="17"/>
+                <TextBox Width="44" Text="1" Margin="0 0 0 0" FontSize="17" />
+            </StackPanel>
+
+            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="105" HorizontalAlignment="Left" Background="#FFF5F3F4" Foreground="White" BorderBrush="#FFF5F3F4" Cursor="Hand">
+                <StackPanel >
+                    <TextBlock Margin="20 0 0 0" Text="Nova Venda" FontSize="17" FontWeight="Normal" Foreground="Black"/>
+                    <Image Source="/Imagens/novavenda.png" Height="61" Width="96"/>
+                </StackPanel>
+            </Button>
+
+            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="105" HorizontalAlignment="Left" Background="#FFF5F3F4" Foreground="White" BorderBrush="#FFF5F3F4" Cursor="Hand">
+                <StackPanel >
+                    <TextBlock Margin="20 0 0 0" Text="Vender" FontSize="17" FontWeight="Bold" Foreground="Black"/>
+                    <Image Source="/Imagens/vender.png" Height="61" Width="96"/>
+                </StackPanel>
+            </Button>
         </WrapPanel>
 
-        <WrapPanel Margin="30 10 0 0" Grid.Row="4">
+        <WrapPanel Margin="30 10 0 0" Grid.Row="4" Grid.ColumnSpan="2">
             <DataGrid x:Name="datagridVenda" Height="200" Width="500" Loaded="datagridVenda_Loaded" SelectionChanged="DataGrid_SelectionChanged"/>
-            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White">
+            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Cursor="Hand">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0 5 20 0" Text="Excluir" FontSize="17" FontWeight="Bold"/>
                     <Image Source="/Imagens/cancelarExcluir.png"/>
@@ -61,7 +94,17 @@
             </Button>
         </WrapPanel>
 
-       
+        <WrapPanel Margin="30,297,0,0" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Label Content="Valor - Desconto" Margin="0 00 0 0" FontSize="17" FontWeight="Bold"/>
+            <TextBlock Height="20" Width="100" Text="$R 87,90" FontSize="17" FontWeight="Bold" Foreground="#FF2E7127" Background="White"/>
+
+            <Label Content="Valor Total" Margin="30 0 0 0" FontSize="17" FontWeight="Bold"/>
+            <TextBlock  Height="20" Width="100" Text="$R 112,99" FontSize="17" FontWeight="Bold" Foreground="#FF2E7127" Background="White"/>
+        </WrapPanel>
+
+        <StackPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Image Source="/Imagens/png loja.png" Height="75" Width="250"/>
+        </StackPanel>
 
 
 

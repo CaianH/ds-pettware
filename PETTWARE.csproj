@@ -9,26 +9,43 @@
   <ItemGroup>
     <None Remove="Imagens\adicionar.png" />
     <None Remove="Imagens\botao-excluir.png" />
+    <None Remove="Imagens\caixa.png" />
     <None Remove="Imagens\cancelarExcluir.png" />
+    <None Remove="Imagens\carrinho.png" />
+    <None Remove="Imagens\cliente.png" />
     <None Remove="Imagens\consultar.png" />
     <None Remove="Imagens\editar.png" />
+    <None Remove="Imagens\funcionarios.png" />
     <None Remove="Imagens\icone salvar.png" />
     <None Remove="Imagens\iconeadicionar.png" />
     <None Remove="Imagens\novavenda.png" />
     <None Remove="Imagens\png loja.png" />
+    <None Remove="Imagens\produtos.png" />
     <None Remove="Imagens\salvar.png" />
     <None Remove="Imagens\vender +.png" />
     <None Remove="Imagens\vender.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Imagens\caixa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Imagens\cancelarExcluir.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagens\carrinho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagens\cliente.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\consultar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\editar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagens\funcionarios.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\iconeadicionar.png">
@@ -38,6 +55,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\png loja.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagens\produtos.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\salvar.png">
