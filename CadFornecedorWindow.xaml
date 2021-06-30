@@ -6,12 +6,13 @@
         xmlns:local="clr-namespace:PETTWARE"
         xmlns:wpftool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
-        Title="CadFornecedorWindow" MinHeight="600" MinWidth="1000" WindowState="Maximized">
+        Title="CadFornecedorWindow" MinHeight="655" MinWidth="1000" WindowState="Maximized">
     <Grid>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
 
         </Grid.RowDefinitions>
 
@@ -124,12 +125,12 @@
                 </Button>
             </WrapPanel>
 
-            <StackPanel Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                <Image Source="/Imagens/png loja.png" Height="75" Width="250" Margin="0 50 0 0"/>
-            </StackPanel>
-
+ 
         </StackPanel>
-
+        
+        <StackPanel Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Image Source="/Imagens/png loja.png" Height="75" Width="250" Margin="0 50 0 0"/>
+        </StackPanel>
 
 
 
