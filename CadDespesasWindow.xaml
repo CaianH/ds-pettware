@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE"
         mc:Ignorable="d"
-        Title="CadDespesasWindow" Height="450" Width="800" Background="#FFF5F3F4">
+        Title="CadDespesasWindow" MinHeight="450" MinWidth="800" Height="450" Width="700" Background="#FFF5F3F4">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
