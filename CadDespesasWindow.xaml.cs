@@ -20,25 +20,11 @@ namespace PETTWARE
         public CadDespesasWindow()
         {
             InitializeComponent();
-            Loaded += datagridDespesas_Loaded;
+            
         }
 
-        private void datagridDespesas_Loaded(object sender, RoutedEventArgs e)
-        {
-            List<CadDespesasWindow> listaDespesas = new List<CadDespesasWindow>();
 
-            for (int i = 1; i < 10; i++)
-            {
-                listaDespesas.Add(new CadDespesasWindow()
-                {
-                    Cód= i,
-                    Descrição = "Descrição" + i,
-                    Tipo = i ,
-                    
-                });
-            }
-            datagridDespesas.ItemsSource = listaDespesas;
-        }
+        
 
 
 
