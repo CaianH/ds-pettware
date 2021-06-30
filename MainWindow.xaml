@@ -6,19 +6,24 @@
         xmlns:local="clr-namespace:PETTWARE"
         xmlns:wpftool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="PETTWARE" MinHeight="650" MinWidth="900" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFF5F3F4">
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="17"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-            <Menu>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2">
+
+            <Menu Background="#fdffb6">
                 <!--___________CADASTROS___________-->
-                <MenuItem Header="Cadastrar" Click="MenuItem_Click">
+                <MenuItem Header="Cadastrar" Click="MenuItem_Click" Foreground="Black">
 
                     <MenuItem Header="Serviço" Click="Click_CadServico"/>
 
@@ -27,25 +32,65 @@
                     <MenuItem Header="Funcionário" Click="Click_CadFuncionario"/>
                     <MenuItem Header="Fornecedor" Click="Click_CadFornecedor"/>
                     <MenuItem Header="Despesas" Click="Click_CadDespesas"/>
-
                     <MenuItem Header="Tipo de Despesa" Click="TipoDespesa_Click"/>
+                    <MenuItem Header="Usuário" Click="CadUsuario_Click"/>
                 </MenuItem>
                 <!--___________CADASTROS___________-->
 
 
                 <!--___________CONSULTAS___________-->
-                <MenuItem Header="Consultar" Click="Consultar_Click">
+                <MenuItem Header="Consultar" Click="Consultar_Click" Foreground="Black">
                     <MenuItem Header="Produto" Click="Produto_Click"/>
+                    <MenuItem Header="Cliente" Click="ConsultarCliente_Click"/>
                     <MenuItem Header="Caixa" Click="ConsuCaixa_Click"/>
                     <MenuItem Header="Funcionário" Click="ConsuFuncionario"/>
                 </MenuItem>
                 <!--___________CONSULTAS___________-->
 
-                <MenuItem Header="Vender" Click="Click_Vender"/>
+                <MenuItem Header="Vender" Click="Click_Vender" Foreground="Black"/>
 
-                
+
             </Menu>
 
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Margin="0 0 0 0" Background="#FF545863">
+            <Image Margin="30" Source="/Imagens/png loja.png" Height="128" Width="250"/>
+
+            <StackPanel Margin="30 0 0 0" Grid.Row="1" Grid.Column="0">
+                <Button Margin="0 0 0 20" Width="200" Height="50" Background="#FFF5F3F4" BorderBrush="#FFF5F3F4" Cursor="Hand" Click="BtProdutos_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 10 20 0" Text="Produtos" FontSize="17"/>
+                        <Image Source="/Imagens/produtos.png"/>
+                    </StackPanel>
+                </Button>
+                <Button Margin="0 0 0 20" Width="200" Height="50" Background="#FFF5F3F4" BorderBrush="#FFF5F3F4" Cursor="Hand" Click="BtFuncionarios_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 10 20 0" Text="Funcionários" FontSize="17"/>
+                        <Image Source="/Imagens/funcionarios.png"/>
+                    </StackPanel>
+                </Button>
+                <Button Margin="0 0 0 20" Width="200" Height="50" Background="#FFF5F3F4" BorderBrush="#FFF5F3F4" Cursor="Hand" Click="BtClientes_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 10 20 0" Text="Clientes" FontSize="17"/>
+                        <Image Source="/Imagens/cliente.png"/>
+                    </StackPanel>
+                </Button>
+                <Button Margin="0 0 0 20" Width="200" Height="50" Background="#FFF5F3F4" BorderBrush="#FFF5F3F4" Cursor="Hand" Click="BtCaixa_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 10 20 0" Text="Caixa" FontSize="17"/>
+                        <Image Source="/Imagens/caixa.png"/>
+                    </StackPanel>
+                </Button>
+                <Button Margin="0 0 0 20" Width="200" Height="50" Background="#FFF5F3F4" BorderBrush="#FFF5F3F4" Cursor="Hand" Click="BtVender_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 10 20 0" Text="Vender" FontSize="17"/>
+                        <Image Source="/Imagens/carrinho.png"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+            
         </StackPanel>
 
     </Grid>

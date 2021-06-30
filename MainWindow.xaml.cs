@@ -103,5 +103,46 @@ namespace PETTWARE
             ConsuFuncionario.ShowDialog();
         }
 
+        private void ConsultarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            ConsulClienteWindow consulCliente = new ConsulClienteWindow();
+            consulCliente.ShowDialog();
+        }
+
+        private void CadUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            CadUsuarioWindow cadUsuario = new CadUsuarioWindow();
+            cadUsuario.ShowDialog();
+        }
+
+        private void BtProdutos_Click(object sender, RoutedEventArgs e)
+        {
+            ConsuProdutoWindow ConsuProduto = new ConsuProdutoWindow();
+            ConsuProduto.ShowDialog();
+        }
+
+        private void BtFuncionarios_Click(object sender, RoutedEventArgs e)
+        {
+            ConsulFuncionarioWindow ConsuFuncionario = new ConsulFuncionarioWindow();
+            ConsuFuncionario.ShowDialog();
+        }
+
+        private void BtClientes_Click(object sender, RoutedEventArgs e)
+        {
+            ConsulClienteWindow consulCliente = new ConsulClienteWindow();
+            consulCliente.ShowDialog();
+        }
+
+        private void BtCaixa_Click(object sender, RoutedEventArgs e)
+        {
+            ConsulCaixaWindow Caixa = new ConsulCaixaWindow();
+            Caixa.ShowDialog();
+        }
+
+        private void BtVender_Click(object sender, RoutedEventArgs e)
+        {
+            FazerVendaWindow Vender = new FazerVendaWindow();
+            Vender.ShowDialog();
+        }
     }
 }
