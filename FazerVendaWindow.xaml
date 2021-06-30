@@ -85,13 +85,24 @@
         </WrapPanel>
 
         <WrapPanel Margin="30 10 0 0" Grid.Row="4" Grid.ColumnSpan="2">
-            <DataGrid x:Name="datagridVenda" Height="200" Width="500" Loaded="datagridVenda_Loaded" SelectionChanged="DataGrid_SelectionChanged"/>
-            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Cursor="Hand" Click="Excluir_Click">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Margin="0 5 20 0" Text="Excluir" FontSize="17" FontWeight="Bold"/>
-                    <Image Source="/Imagens/cancelarExcluir.png"/>
-                </StackPanel>
-            </Button>
+            <DataGrid x:Name="datagridVenda" Height="200" Width="500" Loaded="datagridVenda_Loaded" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                    <DataGridTextColumn Header="Produto" Binding="{Binding Produto}"/>
+                    <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"/>
+                    <DataGridTextColumn Header="Valor Unitario" Binding="{Binding ValorUnitario}"/>
+                    <DataGridTextColumn Header="Valor com Desconto" Binding="{Binding ValorcomDesconto}"/>
+
+                    <DataGridTemplateColumn Header="Ações">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Margin="2" Padding="4" Background="#FFD14A4A" Foreground="White" Cursor="Hand" Click="ExcluirBt_Click">Excluir Produto</Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            
         </WrapPanel>
 
         <WrapPanel Margin="30,297,0,0" Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="2">

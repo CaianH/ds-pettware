@@ -50,7 +50,7 @@ namespace PETTWARE
             MessageBox.Show("Venda Concluída com Sucesso!!", "Vender", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
-        private void Excluir_Click(object sender, RoutedEventArgs e)
+        private void ExcluirBt_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult Result = MessageBox.Show("Deseja Excluir o Produto da lista?", "Confirmação", MessageBoxButton.YesNo, MessageBoxImage.Question);
             switch (Result)
