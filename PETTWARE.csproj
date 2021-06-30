@@ -70,6 +70,7 @@
 
   <ItemGroup>
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.1.0" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.1.0" />
   </ItemGroup>
 
 </Project>
