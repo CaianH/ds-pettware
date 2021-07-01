@@ -16,11 +16,56 @@
         </Grid.RowDefinitions>
 
         <Border Grid.Row="0"  BorderThickness="1" BorderBrush="#FF5C677D" Background="#FF5C677D" />
-        
-        <WrapPanel  Grid.Row="1" Margin="30 80 0 0">
-            <Label Content="Código" Margin="0 0 10 0" FontSize="17"/>
-            <TextBlock Text="001" Width="45" FontSize="17" Background="White"/>
+
+        <WrapPanel Grid.Row="1" Margin="100 0 0 25" Grid.RowSpan="3">
+            <WrapPanel  Grid.Row="1" Margin="30 80 0 0">
+                <Label Content="Código" Margin="100 5 10 0" FontSize="17"/>
+                <TextBlock Text="001" Width="235" FontSize="17" Background="White"/>
+            </WrapPanel>
+
+            <Button x:Name="btnConsul" Margin="29 80 0 25"  Width="150" Height="35" HorizontalAlignment="Left" Click="btnConsul_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="0 5 10 0" Text="Consultar" FontSize="17" FontWeight="Bold"/>
+                    <Image Source="/Imagens/consultar.png"/>
+                </StackPanel>
+            </Button>
+        </WrapPanel> 
+
+        <WrapPanel  Grid.Row="2"  Margin="250 0 0 0" Height="68" >
+                <TextBox Text="Cadastrar tipo de despesa" Width="292" FontSize="17" Background="White" Height="40"/>
+
+
+            <Button x:Name="btnAdd" Margin="27 0 0 0"  Width="150" Height="35" HorizontalAlignment="Left" Click="btnAdd_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="0 5 10 0" Text="Adicionar" FontSize="17" FontWeight="Bold"/>
+                    <Image Source="/Imagens/iconeadicionar.png"/>
+                </StackPanel>
+            </Button>
+
+            
+            
+            
+
         </WrapPanel>
 
+        <StackPanel Grid.Row="3" Grid.Column="1" Margin="320 0 0 0" Orientation="Horizontal">
+            <Button x:Name="btnSalvar" Margin="0 0 20 0"   Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Click="bntSalvar_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="0 5 20 0" Text="Salvar" FontSize="17" FontWeight="Bold"/>
+                    <Image Source="/Imagens/salvar.png"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="btnExcluir" Margin="0 0 20 0"  Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Click="bntExcluir_Click">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="0 5 20 0" Text="Excluir" FontSize="17" FontWeight="Bold"/>
+                    <Image Source="/Imagens/cancelarExcluir.png"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Image Source="/Imagens/png loja.png" Height="75" Width="250" Margin="0 0 0 40"/>
+        </StackPanel>
     </Grid>
 </Window>

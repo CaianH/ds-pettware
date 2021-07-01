@@ -36,7 +36,7 @@
             </StackPanel>
         </WrapPanel>
 
-        <StackPanel Grid.Row="1" Margin="628,388,429,119">
+        <StackPanel Grid.Row="1" Margin="20 360 0 0 ">
             <Button Width="169" Height="65" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="17" FontWeight="Bold" Height="51" Width="151" HorizontalAlignment="Center"><Run Text="Emitir Relatório"/>
@@ -48,7 +48,7 @@
 
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Margin="898,388,186,114">
+        <StackPanel Grid.Row="1" Margin=" 700 360 0 0">
             <Button Width="156" Height="67">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="17" FontWeight="Bold" Height="51" Width="151"><Run Text="Emitir Relatório"/>
