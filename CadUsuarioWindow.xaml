@@ -76,8 +76,6 @@
                     <TextBlock Margin="0 5 10 0" Text="Excluir foto" FontSize="17" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
-
-
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 15 150 0">
