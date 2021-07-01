@@ -39,7 +39,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="3" Grid.Column="0" Margin="200 60 0 20">
-            <Button Margin="0 0 0 0" Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Click="btnadd_click">
+            <Button Margin="0 0 0 0" Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Click="btnadd_click" Cursor="Hand">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0 5 10 0" Text="Adicionar" FontSize="17" FontWeight="Bold"/>
                     <Image Source="/Imagens/iconeadicionar.png"/>
@@ -49,7 +49,7 @@
 
 
         <StackPanel Margin="20 20 0 0" Grid.Row="3" Grid.Column="2" Orientation="Horizontal" >
-            <Button x:Name="btnsalvar" Margin="0 0 20 0"   Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Click="btnSalvar_click">
+            <Button x:Name="btnsalvar" Margin="0 0 20 0"   Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Click="btnSalvar_click" Cursor="Hand">
                 <StackPanel x:Name="btnSalvar_Click" Orientation="Horizontal">
                     <TextBlock x:Name="btnSalvar" Margin="0 5 20 0" Text="Salvar" FontSize="17" FontWeight="Bold"/>
                     <Image Source="/Imagens/salvar.png"/>
@@ -65,13 +65,13 @@
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="2" Margin="50 20 0  0 " Orientation="Vertical">
-            <Button Margin="135 0 0 0" Width="150" Height="35" HorizontalAlignment="Left" Click="btnaddft_click">
+            <Button Margin="135 0 0 0" Width="150" Height="35" HorizontalAlignment="Left" Click="btnaddft_click" Cursor="Hand">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0 5 10 0" Text="Adicionar foto" FontSize="17" FontWeight="Bold"/>
                 </StackPanel>
             </Button>
 
-            <Button Margin="135 15 0 0" Width="150" Height="35" HorizontalAlignment="Left" Click="btnex_click">
+            <Button Margin="135 15 0 0" Width="150" Height="35" HorizontalAlignment="Left" Click="btnex_click" Cursor="Hand">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0 5 10 0" Text="Excluir foto" FontSize="17" FontWeight="Bold"/>
                 </StackPanel>

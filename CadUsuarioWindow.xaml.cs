@@ -21,5 +21,36 @@ namespace PETTWARE
         {
             InitializeComponent();
         }
+
+        private void btnSalvar_click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Cadastro salvo com sucesso!", "Cadastrar Usuários", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void btnExcluir_click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult Result = MessageBox.Show("Deseja excluir este usuário?", "Confirmação", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            switch (Result)
+            {
+                case MessageBoxResult.Yes:
+                    MessageBox.Show("Usuário excluído com Sucesso!", "Confirmação", MessageBoxButton.OK, MessageBoxImage.Information);
+                    break;
+            }
+        }
+
+        private void btnaddft_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnex_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnadd_click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
