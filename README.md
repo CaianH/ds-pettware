@@ -1,5 +1,7 @@
 # ds-pettware
-Desenvolvimento do Sistema - PETTWARE
+Desenvolvimento do Sistema - PETTWARE 
+
+linguagens e tecnologias: C# / WPF
 
 Integrantes do Grupo:
 - Caian Henrique
