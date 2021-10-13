@@ -25,18 +25,18 @@
 
         <WrapPanel Grid.Column="0" Grid.Row="1" Margin="30 80 0 0">
             <Label Content="Código" Margin="0 0 10 0" FontSize="17"/>
-            <TextBlock Text="001" Width="45" FontSize="17" Background="White"/>
+            <TextBlock x:Name="TBcod" Text="000" Width="45" FontSize="17" Background="White"/>
         </WrapPanel>
 
         <WrapPanel Grid.Column="0" Grid.Row="2" Margin="30 10 0 0">
             <Label Content="Serviço" Margin="0 0 10 0" FontSize="17"/>
-            <TextBox Width="200" Text="Banho Simples" Margin="0 0 50 0" FontSize="17" />
+            <TextBox x:Name="TBServico" Width="200" Text="" Margin="0 0 50 0" FontSize="17" />
 
             <Label Content="Preço" Margin="0 0 10 0" FontSize="17"/>
-            <TextBox Text="$R 50,00" Margin="0 0 50 0" FontSize="17"/>
+            <TextBox x:Name="TBPrecoNormal" Text="" Margin="0 0 50 0" FontSize="17"/>
 
             <Label Content="Preço Com Desconto" Margin="0 0 10 0" FontSize="17"/>
-            <TextBox Text="$R 45,50" FontSize="17"/>
+            <TextBox x:Name ="TBPrecoComDesconto"  Text="" FontSize="17" Cursor="IBeam"/>
         </WrapPanel>
 
 
