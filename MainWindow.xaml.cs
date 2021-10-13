@@ -25,13 +25,10 @@ namespace PETTWARE
         public MainWindow()
         {
             InitializeComponent();
-            //Insert_Test();
             
         }
 
-        
-        
-
+     
         private void Click_CadServico(object sender, RoutedEventArgs e)
         {
             CadastrarServicoWindow CadServico = new CadastrarServicoWindow();
