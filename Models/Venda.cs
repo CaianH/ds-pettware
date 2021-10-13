@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PETTWARE
 {
-    class Venda
+    public class Venda
     {
         public int ID { get; set; }
 
