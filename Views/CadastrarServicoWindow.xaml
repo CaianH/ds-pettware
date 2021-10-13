@@ -33,7 +33,7 @@
             <TextBox x:Name="TBServico" Width="200" Text="" Margin="0 0 50 0" FontSize="17" />
 
             <Label Content="Preço" Margin="0 0 10 0" FontSize="17"/>
-            <TextBox x:Name="TBPrecoNormal" Width="70" Text="" Margin="0 0 50 0" FontSize="17"/>
+            <TextBox x:Name="TBPrecoNormal" Width="60" Text="" Margin="0 0 50 0" FontSize="17"/>
 
             <Label Content="Preço Com Desconto" Margin="0 0 10 0" FontSize="17"/>
             <TextBox x:Name ="TBPrecoComDesconto" Width="70" Text="" FontSize="17" Cursor="IBeam"/>
