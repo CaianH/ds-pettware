@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using PETTWARE.DataBase;
+
+using PETTWARE.Models;
 
 namespace PETTWARE
 {
@@ -24,18 +25,10 @@ namespace PETTWARE
         public MainWindow()
         {
             InitializeComponent();
-            try
-            {
-                var conexao = new conexao();
-            } catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
             
         }
 
-        
-
+     
         private void Click_CadServico(object sender, RoutedEventArgs e)
         {
             CadastrarServicoWindow CadServico = new CadastrarServicoWindow();

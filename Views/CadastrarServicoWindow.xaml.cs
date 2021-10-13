@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PETTWARE.Models;
 
 namespace PETTWARE
 {
@@ -20,11 +21,37 @@ namespace PETTWARE
         public CadastrarServicoWindow()
         {
             InitializeComponent();
+            Loaded += CadastrarServicoWindow_Loaded;
+        }
+
+        private void CadastrarServicoWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            
         }
 
         private void Salvar_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Serviço Salvo com Sucesso!!", "Cadastrar Serviço",MessageBoxButton.OK,MessageBoxImage.Information);
+           
+           
+                try
+                {
+                    Servico servico = new Servico();
+                    servico.Nome = TBServico.Text;
+                    servico.PrecoNormal = Convert.ToDouble(TBPrecoNormal.Text);
+                    servico.PrecoComDesconto = Convert.ToDouble(TBPrecoComDesconto.Text); ;
+
+                    ServicoDAO servicoDAO = new ServicoDAO();
+                    servicoDAO.Insert(servico);
+
+                    MessageBox.Show("Serviço Cadastrado com sucesso!!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Não Executado", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            
+
+            
         }
 
         private void Excluir_Click(object sender, RoutedEventArgs e)
