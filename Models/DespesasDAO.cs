@@ -31,12 +31,13 @@ namespace PETTWARE.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO despesas (tipo_desp, nome_desp, cod_caixa, valor_desp) " +
-                    "VALUES  (@tipo despesa, @nome despesa, @valor)";
+                query.CommandText = "INSERT INTO despesas (tipo_desp, nome_desp) " +
+                    "VALUES  (@tipo despesa, @nome despesa)";
 
+               
                 query.Parameters.AddWithValue("@tipo despesa", t.TipoDespesa);
                 query.Parameters.AddWithValue("@nome despesa", t.NomeDespesa);
-                query.Parameters.AddWithValue("@valor", t. Valor);
+               
 
 
                 var result = query.ExecuteNonQuery();

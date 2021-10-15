@@ -37,11 +37,11 @@ namespace PETTWARE.Models
                 query.CommandText = "INSERT INTO fornecedor (cnpj_forn, nome_forn, telefone_forn, email, representante_forn) " +
                     "VALUES  (@cnpj, @nome, @telefone, @email, @representante)";
 
-                query.Parameters.AddWithValue("@cnpj", t.CNPJ);
-                query.Parameters.AddWithValue("@nome", t.Nome);
+                query.Parameters.AddWithValue("@cnpj", t. CNPJ);
+                query.Parameters.AddWithValue("@nome", t.NomeForn);
                 query.Parameters.AddWithValue("@telefone", t.Telefone);
-                query.Parameters.AddWithValue("@email", t.Email);
-                query.Parameters.AddWithValue("@representante", t.Representante);
+                query.Parameters.AddWithValue("@email", t. Email);
+                query.Parameters.AddWithValue("@representante", t. RepresentanteForn);
 
                 var result = query.ExecuteNonQuery();
 
