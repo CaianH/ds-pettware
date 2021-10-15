@@ -54,8 +54,6 @@ namespace PETTWARE.Models
                 conn.Close();
             }
         }
-    }
-
         public List<Despesas> List()
         {
             throw new NotImplementedException();
@@ -65,5 +63,5 @@ namespace PETTWARE.Models
         {
             throw new NotImplementedException();
         }
-    
+    }
 }

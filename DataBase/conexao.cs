@@ -14,20 +14,21 @@ namespace PETTWARE.DataBase
 
         private static string user = "root";
 
-        private static string password = "";
+        private static string password = "31193119Caian";
 
         private static string dbname = "BD_PETTWARE";
 
         private static MySqlConnection connection;
 
         private static MySqlCommand command;
-
+        
         public conexao()
         {
             try
             {
                 connection = new MySqlConnection($"server={host};database={dbname};port={port};user={user};password={password}");
                 connection.Open();
+                
             } catch (Exception)
             {
                 throw;
