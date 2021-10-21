@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PETTWARE.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -25,8 +26,31 @@ namespace PETTWARE
 
         private void bntSalvar_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Cadastro Salvo com Sucesso!", "Cadastrar Fornecedores", MessageBoxButton.OK, MessageBoxImage.Information);
-        }
+            try
+            {
+                Fornecedor fornecedor = new Fornecedor();
+                fornecedor.CNPJ = txtCNPJ.Text;
+                fornecedor.NomeForn = txtNome.Text;
+                fornecedor.Telefone = txtTelefone.Text;
+                fornecedor.Email = txtEmail.Text;
+                fornecedor.RepresentanteForn = txtRepresentante.Text;
+
+                FornecedorDAO fornecerdorDAO = new FornecedorDAO();
+                fornecerdorDAO.Insert(fornecedor);
+
+                MessageBox.Show("Cadastro Salvo com Sucesso!", "Cadastrar Fornecedores", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Não Executado", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+
+        }   
+
+
 
         private void bntExcluir_Click(object sender, RoutedEventArgs e)
         {

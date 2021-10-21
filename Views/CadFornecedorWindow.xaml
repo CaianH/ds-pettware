@@ -42,11 +42,13 @@
                 <TextBox x:Name="txtNome" Text="Maria Oliveira" Width="200" FontSize="17"/>
 
             </WrapPanel>
+            
 
             <WrapPanel Grid.Row="3" Grid.Column="0" Margin="30 30 0 0">
                 <Label Content="CPF" Margin="0 0 10 0" FontSize="17"/>
                 <TextBox x:Name="txtCPF" Text=" 000.000.000-00" Width="200" FontSize="17"/>
             </WrapPanel>
+            
 
             <WrapPanel Grid.Row="4" Grid.Column="0" Margin="30 30 0 0">
                 <Label Content="RG" Margin="0 0 10 0" FontSize="17"/>
@@ -56,6 +58,11 @@
             <WrapPanel Grid.Row="5" Grid.Column="0" Margin="30 30 0 0">
                 <Label Content="Telefone" Margin="0 0 10 0" FontSize="17"/>
                 <TextBox x:Name="txtTelefone" Text=" (00) 0 0000-0000" Width="200" FontSize="17"/>
+            </WrapPanel>
+            
+            <WrapPanel Grid.Row="5" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="E-mail" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtEmail" Text=" mariaoliver@gmail.com" Width="200" FontSize="17"/>
             </WrapPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="0" Margin="30 70 0 0">
@@ -91,6 +98,13 @@
                 </ComboBox>
             </WrapPanel>
 
+            <WrapPanel  Margin="30 30 0 0">
+
+                <Label Content="CNPJ" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtCNPJ" Text=" 00.000.000/0001-00" Width="200" FontSize="17"/>
+
+            </WrapPanel>
+          
 
             <WrapPanel  Margin="30 30 0 0">
 
@@ -114,7 +128,12 @@
                 <TextBox x:Name="txtNum" Text=" (00) 0 0000-0000" Width="200" FontSize="17"/>
             </WrapPanel>
 
-            <WrapPanel Margin="30 40 0 0" Grid.Row="1" Grid.Column="2">
+            <WrapPanel Margin="30 30 0 0">
+                <Label Content="Nome Representante" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtRepresentante" Text="Carlos Antônio" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Margin="30 70 0 0" Grid.Row="1" Grid.Column="2">
                 <Button x:Name="btnSalvar" Margin="0 0 20 0"   Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Click="bntSalvar_Click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="0 5 20 0" Text="Salvar" FontSize="17" FontWeight="Bold"/>
@@ -122,7 +141,7 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="btnExcluir" Margin="0 0 20 0"  Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Click="bntExcluir_Click">
+                <Button x:Name="btnExcluir" Margin="0 0 0 0"  Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Click="bntExcluir_Click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="0 5 20 0" Text="Excluir" FontSize="17" FontWeight="Bold"/>
                         <Image Source="/Imagens/cancelarExcluir.png"/>

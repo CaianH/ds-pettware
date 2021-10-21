@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PETTWARE.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -25,16 +26,35 @@ namespace PETTWARE
 
         private void bntSalvar_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Cadastro Salvo com Sucesso!", "Cadastrar Fornecedores", MessageBoxButton.OK, MessageBoxImage.Information);
+            try
+            {
+                Despesas despesas = new Despesas();
+                despesas.TipoDespesa = ComboTipoDes.Text;
+                despesas.NomeDespesa = txtNome.Text;
+                
+                DespesasDAO despesasDAO = new DespesasDAO();
+                despesasDAO.Insert(despesas);
+
+                MessageBox.Show("Cadastro Salvo com Sucesso!", "Cadastrar Despesas", MessageBoxButton.OK, MessageBoxImage.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Não Executado", MessageBoxButton.OK, MessageBoxImage.Error);
+
+            }
+
+          
         }
 
         private void bntExcluir_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult Result = MessageBox.Show("Deseja excluir este Fornecedor?", "Confirmação", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            MessageBoxResult Result = MessageBox.Show("Deseja excluir essa Despesa?", "Confirmação", MessageBoxButton.YesNo, MessageBoxImage.Question);
             switch (Result)
             {
                 case MessageBoxResult.Yes:
-                    MessageBox.Show("Fornecedor Excluído com Sucesso!", "Confirmação", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Despesa Excluída com Sucesso!", "Confirmação", MessageBoxButton.OK, MessageBoxImage.Information);
                     break;
             }
         }
