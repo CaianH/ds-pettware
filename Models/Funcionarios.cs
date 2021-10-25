@@ -7,17 +7,13 @@ namespace PETTWARE
     public class Funcionarios
     {
 
-        public string Nome { get; set; }
-
-        public double Telefone { get; set; }
-
-        public int Codigo { get; set; }
-
-        public double CPF { get; set; }
-
-        public double RG { get; set; }
-
-        public string Email { get; set; }
+        public int cod { get; set; }
+        public string nome { get; set; }
+        public string rg { get; set; }
+        public string cpf { get; set; }
+        public DateTime datanasc { get; set; }
+        public string email { get; set; }
+        public string telefone { get; set; }
 
 
     }

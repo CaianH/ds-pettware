@@ -5,33 +5,107 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE"
         mc:Ignorable="d"
-        Title="Cadastrar Produto" MinHeight="450" MinWidth="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" Height="1080" Width="1920
-        ">
+        Title="Cadastrar Produto" MinHeight="655" MinWidth="1000" WindowState="Maximized" Background="#FFF5F3F4">
     <Grid>
-        <Label x:Name="Codigo" Content="Código:" HorizontalAlignment="Left" Margin="50,80,0,0" VerticalAlignment="Top" Height="73" Width="171" FontSize="45"/>
-        <Label Content="Descrição do Produto" HorizontalAlignment="Left" Margin="50,221,0,0" VerticalAlignment="Top" Height="72" Width="357" FontSize="35"/>
-        <Label Content="Preço Normal" HorizontalAlignment="Left" Margin="50,361,0,0" VerticalAlignment="Top" Height="73" Width="236" FontSize="35"/>
-        <Label Content="Preço com Desconto" HorizontalAlignment="Left" Margin="50,501,0,0" VerticalAlignment="Top" Height="73" Width="342" FontSize="35"/>
-        <Label Content="Quantidade em estoque" HorizontalAlignment="Left" Margin="50,642,0,0" VerticalAlignment="Top" Height="73" Width="396" FontSize="35"/>
-        <Button Content="Adicionar" HorizontalAlignment="Left" Margin="50,814,0,0" VerticalAlignment="Top" FontSize="35" Height="67" Width="192"/>
-        <Button Content="Consultar Produto    " HorizontalAlignment="Left" Margin="50,943,0,0" VerticalAlignment="Top" FontSize="35" Height="67" Width="357"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
 
-        <Image Source="/Imagens/consultar.png" Margin="361,962,1524,67" RenderTransformOrigin="0.5,0.5" Width="35" Height="35"/>
-        <Button Content="    Cancelar" HorizontalAlignment="Left" Margin="1121,901,0,0" VerticalAlignment="Top" FontSize="35" Height="67" Width="206"/>
-        <Button Content="    Salvar" HorizontalAlignment="Left" Margin="1398,901,0,0" VerticalAlignment="Top" FontSize="35" Click="Button_Click" Height="67" Width="168"/>
-        <TextBox HorizontalAlignment="Left" Margin="508,234,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Height="51" FontSize="35"/>
-        <TextBox HorizontalAlignment="Left" Margin="508,375,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Height="51" FontSize="35"/>
-        <TextBox HorizontalAlignment="Left" Margin="508,516,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Height="51" FontSize="35"/>
-        <TextBox HorizontalAlignment="Left" Margin="508,656,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="344" Height="50"/>
-        <Button HorizontalAlignment="Left" Margin="1445,612,0,0" VerticalAlignment="Top" Height="56" Width="114">
-            <Image Height="50" Stretch="Fill" Source="pack://siteoforigin:,,,/Image1.png" Width="110"/>
-        </Button>
-        <TextBlock HorizontalAlignment="Center" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="1920" Height="21" Background="#FF5C687D"/>
-        <TextBlock HorizontalAlignment="Left" Margin="222,102,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="44" Width="206"/>
-        <Image Source="/Imagens/adicionar.png" Width="40" Margin="1482,108,398,-110"/>
-        <Image Source="/Imagens/png loja.png" Width="200" Margin="1710,457,10,-457"/>
-        <Image Source="/Imagens/cancelarExcluir.png" Margin="1130,921,759,113" Width="30.9" Height="30"/>
-        <Image Source="/Imagens/salvar.png" Width="35" Height="40" Margin="1403,918,482,106"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="200*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="#FF5C677D" Height="22" Width="1922" Background="#FF5C677D"/>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <WrapPanel Grid.Row="1" Grid.Column="0" Margin="30 30 0 0" >
+
+                <Label Content="Código" Margin="0 20 10 0" FontSize="17"/>
+                <TextBlock x:Name="txtCod" Text="001" Width="45" Height="30"  FontSize="17" Background="White" Margin="0 0 100 0"/>
+
+            </WrapPanel>
+
+
+            <WrapPanel Grid.Row="2" Grid.Column="0" Margin="30 30 0 0">
+
+                <Label Content="Descrição do Produto" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtdescricao" Text="Ração para cachorro 15kg" Width="200" FontSize="17"/>
+
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="3" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="Preço" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtpreco" Text="R$ 100" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="4" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="Preço com Desconto" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtpreco_desconto" Text="R$ 95" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="5" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="Quantidade em Estoque" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtquant" Text="20" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="30 70 0 0">
+                <Button x:Name="btnAdd" Margin="0 0 0 0" Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 5 10 0" Text="Adicionar" FontSize="17" FontWeight="Bold"/>
+                        <Image Source="/Imagens/iconeadicionar.png"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="btnConsul" Margin="0 20 0 0" Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 5 10 0" Text="Consultar" FontSize="17" FontWeight="Bold"/>
+                        <Image Source="/Imagens/consultar.png"/>
+                    </StackPanel>
+                </Button>
+                
+                
+            </StackPanel>
+
+
+
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2">
+
+
+
+            <WrapPanel Margin="30 40 0 0" Grid.Row="1" Grid.Column="2">
+                <Button x:Name="btnSalvar" Margin="0 0 20 0"   Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Click="bntSalvar_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 5 20 0" Text="Salvar" FontSize="17" FontWeight="Bold"/>
+                        <Image Source="/Imagens/salvar.png"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="btnExcluir" Margin="0 0 20 0"  Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Click="bntExcluir_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 5 20 0" Text="Excluir" FontSize="17" FontWeight="Bold"/>
+                        <Image Source="/Imagens/cancelarExcluir.png"/>
+                    </StackPanel>
+                </Button>
+            </WrapPanel>
+
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Image Source="/Imagens/png loja.png" Height="75" Width="250" Margin="0 50 0 0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" >
+            <Grid Background="#D6D6D6" Height="300" Width="1" VerticalAlignment="Center" Margin="0,25,0,0"/>
+        </StackPanel>
 
     </Grid>
 </Window>
