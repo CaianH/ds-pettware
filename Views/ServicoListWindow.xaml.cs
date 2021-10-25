@@ -26,14 +26,31 @@ namespace PETTWARE.Views
 
         private void ServicoListWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            var dao = new ServicoDAO();
+            
+        }
 
-            foreach(Servico serv in dao.List())
+        private void LoadList()
+        {
+            try
             {
-                MessageBox.Show(serv.Nome);
+                var dao = new ServicoDAO();
+
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        
+        private void datagridServico_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
