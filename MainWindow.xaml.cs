@@ -12,7 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+<<<<<<< HEAD
 using PETTWARE.DataBase;
+=======
+using PETTWARE.Views;
+>>>>>>> main
 using PETTWARE.Models;
 
 namespace PETTWARE
