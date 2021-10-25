@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PETTWARE.Views;
 using PETTWARE.Models;
 
 namespace PETTWARE
@@ -83,6 +84,12 @@ namespace PETTWARE
             btnSalvar.IsEnabled = IsEnabled;
             btnExcluir.IsEnabled = IsEnabled;
 
+        }
+
+        private void btnConsultar_Click(object sender, RoutedEventArgs e)
+        {
+            ServicoListWindow ListaServico = new ServicoListWindow();
+            ListaServico.ShowDialog();
         }
     }
 }

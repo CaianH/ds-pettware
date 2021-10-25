@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PETTWARE.Models;
 
 namespace PETTWARE.Views
 {
@@ -20,6 +21,19 @@ namespace PETTWARE.Views
         public ServicoListWindow()
         {
             InitializeComponent();
+            Loaded += ServicoListWindow_Loaded;
         }
+
+        private void ServicoListWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            var dao = new ServicoDAO();
+
+            foreach(Servico serv in dao.List())
+            {
+                MessageBox.Show(serv.Nome);
+            }
+        }
+
+        
     }
 }

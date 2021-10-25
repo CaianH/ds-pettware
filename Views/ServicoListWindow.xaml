@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE.Views"
         mc:Ignorable="d"
-        Title="ServicoListWindow" Height="450" Width="800">
+        Title="ServicoListWindow"  Height="450" Width="800" Loaded="ServicoListWindow_Loaded" WindowState="Maximized">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="79*"/>
+        </Grid.ColumnDefinitions>
+
     </Grid>
 </Window>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using PETTWARE.Interfaces;
+using MySql.Data.MySqlClient;
 using PETTWARE.DataBase;
 
 namespace PETTWARE.Models
@@ -49,7 +50,37 @@ namespace PETTWARE.Models
 
         public List<Servico> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Servico> list = new List<Servico>();
+
+                var query = conn.Query();
+
+                query.CommandText = "SELECT * FROM Servico";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    list.Add(new Servico() { 
+                    Id = reader.GetInt32("cod_serv"),
+                    Nome = reader.GetString("nome_serv"),
+                    PrecoNormal = reader.GetDouble("preconormal_serv"),
+                    PrecoComDesconto = reader.GetDouble("precocomdesconto_serv")
+
+                    });
+                }
+
+                return list;
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public void Update(Servico t)
