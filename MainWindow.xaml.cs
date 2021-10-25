@@ -49,7 +49,7 @@ namespace PETTWARE
 
         private void Click_CadFuncionario(object sender, RoutedEventArgs e)
         {
-            CadFuncionarioWindow1 Funcionario = new CadFuncionarioWindow1();
+            CadFuncionarioWindow Funcionario = new CadFuncionarioWindow();
             Funcionario.ShowDialog();
         }
 
