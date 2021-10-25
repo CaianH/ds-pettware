@@ -25,18 +25,18 @@
 
         <WrapPanel Grid.Column="0" Grid.Row="1" Margin="30 80 0 0">
             <Label Content="Código" Margin="0 0 10 0" FontSize="17"/>
-            <TextBlock x:Name="TBcod" Text="000" Width="45" FontSize="17" Background="White"/>
+            <TextBlock x:Name="TBcod" Text="Código" Width="58" FontSize="17" Background="White"/>
         </WrapPanel>
 
         <WrapPanel Grid.Column="0" Grid.Row="2" Margin="30 10 0 0">
             <Label Content="Serviço" Margin="0 0 10 0" FontSize="17"/>
-            <TextBox x:Name="TBServico" Width="200" Text="" Margin="0 0 50 0" FontSize="17" />
+            <TextBox x:Name="TBServico" Width="200" Text="" Margin="0 0 50 0" FontSize="17" Cursor="IBeam" IsEnabled="False" />
 
-            <Label Content="Preço" Margin="0 0 10 0" FontSize="17"/>
-            <TextBox x:Name="TBPrecoNormal" Width="70" Text="" Margin="0 0 50 0" FontSize="17"/>
+            <Label Content="Preço (R$)" Margin="0 0 10 0" FontSize="17"/>
+            <TextBox x:Name="TBPrecoNormal" Width="70" Text="" Margin="0 0 50 0" FontSize="17" IsEnabled="False"/>
 
-            <Label Content="Preço Com Desconto" Margin="0 0 10 0" FontSize="17"/>
-            <TextBox x:Name ="TBPrecoComDesconto" Width="70" Text="" FontSize="17" Cursor="IBeam"/>
+            <Label Content="Preço Com Desconto (R$)" Margin="0 0 10 0" FontSize="17"/>
+            <TextBox x:Name ="TBPrecoComDesconto" Width="70" Text="" FontSize="17" Cursor="IBeam" IsEnabled="False"/>
         </WrapPanel>
 
 
@@ -48,7 +48,7 @@
             </StackPanel>
             </Button>
 
-            <Button Margin="30 15 0 0" Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Cursor="Hand">
+            <Button x:Name="Adiconarbtn" Margin="30 15 0 0" Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Cursor="Hand" Click="Adicionar_Click">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0 5 10 0" Text="Adicionar" FontSize="17" FontWeight="Bold"/>
                     <Image Source="/Imagens/iconeadicionar.png"/>
@@ -57,14 +57,14 @@
         </StackPanel>
 
         <WrapPanel Grid.Column="0" Margin="30 40 0 0" Grid.Row="4">
-            <Button Margin="0 0 20 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Cursor="Hand" Click="Salvar_Click">
+            <Button x:Name="btnSalvar" Margin="0 0 20 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Cursor="Hand" Click="Salvar_Click" IsEnabled="False">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0 5 20 0" Text="Salvar" FontSize="17" FontWeight="Bold"/>
                     <Image Source="/Imagens/salvar.png"/>
                 </StackPanel>
             </Button>
 
-            <Button Margin="0 0 500 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Cursor="Hand" Click="Excluir_Click">
+            <Button x:Name="btnExcluir" Margin="0 0 500 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Cursor="Hand" Click="Excluir_Click" IsEnabled="False">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0 5 20 0" Text="Excluir" FontSize="17" FontWeight="Bold"/>
                     <Image Source="/Imagens/cancelarExcluir.png"/>

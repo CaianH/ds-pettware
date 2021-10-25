@@ -38,12 +38,14 @@ namespace PETTWARE
                     Servico servico = new Servico();
                     servico.Nome = TBServico.Text;
                     servico.PrecoNormal = Convert.ToDouble(TBPrecoNormal.Text);
-                    servico.PrecoComDesconto = Convert.ToDouble(TBPrecoComDesconto.Text); ;
+                    servico.PrecoComDesconto = Convert.ToDouble(TBPrecoComDesconto.Text);
 
                     ServicoDAO servicoDAO = new ServicoDAO();
                     servicoDAO.Insert(servico);
 
                     MessageBox.Show("Serviço Cadastrado com sucesso!!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    ClearInputs();
                 }
                 catch (Exception ex)
                 {
@@ -52,6 +54,14 @@ namespace PETTWARE
             
 
             
+        }
+
+        private void ClearInputs()
+        {
+
+            TBServico.Text = "";
+            TBPrecoNormal.Text = "";
+            TBPrecoComDesconto.Text = "";
         }
 
         private void Excluir_Click(object sender, RoutedEventArgs e)
@@ -63,6 +73,16 @@ namespace PETTWARE
                     MessageBox.Show("Serviço Excluido com Sucesso!!", "Confirmação", MessageBoxButton.OK, MessageBoxImage.Information);
                     break;
             }
+        }
+
+        private void Adicionar_Click(object sender, RoutedEventArgs e)
+        {
+            TBServico.IsEnabled = IsEnabled;
+            TBPrecoNormal.IsEnabled = IsEnabled;
+            TBPrecoComDesconto.IsEnabled = IsEnabled;
+            btnSalvar.IsEnabled = IsEnabled;
+            btnExcluir.IsEnabled = IsEnabled;
+
         }
     }
 }
