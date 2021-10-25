@@ -13,11 +13,11 @@ using System.Windows.Shapes;
 namespace PETTWARE.Views
 {
     /// <summary>
-    /// Lógica interna para Window1.xaml
+    /// Lógica interna para CadastrarFuncionarioWindow.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class CadastrarFuncionarioWindow : Window
     {
-        public Window1()
+        public CadastrarFuncionarioWindow()
         {
             InitializeComponent();
         }
