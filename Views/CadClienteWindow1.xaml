@@ -102,7 +102,7 @@
             </WrapPanel>
 
             <WrapPanel Margin="30 40 0 0" Grid.Row="1" Grid.Column="2">
-                <Button x:Name="btnSalvar" Margin="0 0 20 0"   Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Click="bntSalvar_Click">
+                <Button x:Name="btnSalvar" Margin="0 0 20 0"   Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Click="bntSalvar_Click" Cursor="Hand">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="0 5 20 0" Text="Salvar" FontSize="17" FontWeight="Bold"/>
                         <Image Source="/Imagens/salvar.png"/>

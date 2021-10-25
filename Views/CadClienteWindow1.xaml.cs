@@ -36,5 +36,15 @@ namespace PETTWARE
         {
             MessageBox.Show("Cliente Cadastrado com Sucesso");
         }
+
+        private void bntSalvar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void bntExcluir_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

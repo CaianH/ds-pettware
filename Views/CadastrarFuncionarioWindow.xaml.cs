@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PETTWARE.Models;
 
 namespace PETTWARE.Views
 {
@@ -20,6 +21,17 @@ namespace PETTWARE.Views
         public CadastrarFuncionarioWindow()
         {
             InitializeComponent();
+        }
+
+
+        private void btnSalvar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

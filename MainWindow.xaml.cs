@@ -12,11 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-<<<<<<< HEAD
 using PETTWARE.DataBase;
-=======
 using PETTWARE.Views;
->>>>>>> main
 using PETTWARE.Models;
 
 namespace PETTWARE
@@ -53,7 +50,7 @@ namespace PETTWARE
 
         private void Click_CadFuncionario(object sender, RoutedEventArgs e)
         {
-            CadFuncionarioWindow Funcionario = new CadFuncionarioWindow();
+            CadastrarFuncionarioWindow Funcionario = new CadastrarFuncionarioWindow();
             Funcionario.ShowDialog();
         }
 
