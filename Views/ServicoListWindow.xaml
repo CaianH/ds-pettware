@@ -14,11 +14,11 @@
         <WrapPanel Margin="30 10 0 0" Grid.Row="4" >
             <DataGrid x:Name="datagridServico" Height="200" Width="680" Loaded="datagridServico_Loaded" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
-                    <DataGridTextColumn Header="Serviço" Binding="{Binding Produto}"/>
-                    <DataGridTextColumn Header="Preco Normal" Binding="{Binding Quantidade}"/>
-                    <DataGridTextColumn Header="Preco com Desconto" Binding="{Binding ValorUnitario}"/>
-                    <DataGridTextColumn Header="Valor com Desconto" Binding="{Binding ValorcomDesconto}"/>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Serviço" Binding="{Binding Nome}"/>
+                    <DataGridTextColumn Header="Preco Normal" Binding="{Binding PrecoNormal}"/>
+                    <DataGridTextColumn Header="Preco com Desconto" Binding="{Binding PrecoComDesconto}"/>
+                   
 
                     <DataGridTemplateColumn Header="Ações">
                         <DataGridTemplateColumn.CellTemplate>

@@ -46,7 +46,13 @@ namespace PETTWARE
 
                     MessageBox.Show("Serviço Cadastrado com sucesso!!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                    ClearInputs();
+                TBServico.IsEnabled = false;
+                TBPrecoNormal.IsEnabled = false;
+                TBPrecoComDesconto.IsEnabled = false;
+                btnSalvar.IsEnabled = false;
+                btnExcluir.IsEnabled = false;
+
+                ClearInputs();
                 }
                 catch (Exception ex)
                 {
@@ -78,7 +84,7 @@ namespace PETTWARE
 
         private void Adicionar_Click(object sender, RoutedEventArgs e)
         {
-            TBServico.IsEnabled = IsEnabled;
+            TBServico.IsEnabled = true;
             TBPrecoNormal.IsEnabled = IsEnabled;
             TBPrecoComDesconto.IsEnabled = IsEnabled;
             btnSalvar.IsEnabled = IsEnabled;

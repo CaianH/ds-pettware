@@ -31,8 +31,8 @@ namespace PETTWARE.Models
             try
             {
                 var query = conn.Query();
-                query.CommandText = "INSERT INTO Fornecedor ( NomeForn, Email, CNPJ, Telefone, RepresentanteForn)" +
-                    "VALUES ( @nome, @email, @cnpj, @telefone, @representante)";
+                query.CommandText = "INSERT INTO Fornecedor (cnpj_forn, nome_forn, telefone_forn, email, representante_forn)" +
+                    "VALUES ( @cnpj, @nome, @telefone, @email, @representante)";
 
 
                 query.Parameters.AddWithValue("@nome", t.NomeForn);

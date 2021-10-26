@@ -26,7 +26,7 @@ namespace PETTWARE.Views
 
         private void ServicoListWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            LoadList();
         }
 
         private void LoadList()
@@ -34,6 +34,8 @@ namespace PETTWARE.Views
             try
             {
                 var dao = new ServicoDAO();
+
+                datagridServico.ItemsSource = dao.List();
 
                 
             }
