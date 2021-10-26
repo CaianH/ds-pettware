@@ -14,6 +14,7 @@
     <None Remove="Imagens\carrinho.png" />
     <None Remove="Imagens\cliente.png" />
     <None Remove="Imagens\consultar.png" />
+    <None Remove="Imagens\edit.png" />
     <None Remove="Imagens\editar.png" />
     <None Remove="Imagens\funcionarios.png" />
     <None Remove="Imagens\icone salvar.png" />
@@ -21,6 +22,7 @@
     <None Remove="Imagens\novavenda.png" />
     <None Remove="Imagens\png loja.png" />
     <None Remove="Imagens\produtos.png" />
+    <None Remove="Imagens\remover.png" />
     <None Remove="Imagens\salvar.png" />
     <None Remove="Imagens\vender +.png" />
     <None Remove="Imagens\vender.png" />
@@ -42,6 +44,9 @@
     <Content Include="Imagens\consultar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Imagens\edit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Imagens\editar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -58,6 +63,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\produtos.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagens\remover.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imagens\salvar.png">

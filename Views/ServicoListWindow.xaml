@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE.Views"
         mc:Ignorable="d"
+        
         Title="Consultar Serviço" Background="#FFF5F3F4" MaxHeight="600" MaxWidth="900" MinHeight="550" MinWidth="800" Loaded="ServicoListWindow_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -30,9 +31,25 @@
                     <DataGridTemplateColumn Header="Ações">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Margin="2" Padding="4" Background="#FFD14A4A" Foreground="White" Cursor="Hand" >Excluir Produto</Button>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="btnEditar"
+                                        Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                                      ToolTip="MaterialDesignFloatingActionMiniLightButton"
+                                      IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}">
+                                        <Image Source="/Imagens/edit.png" Width="20" Height="20"/>
+                                    </Button>
+
+                                    <Button x:Name="btnRemover" Margin="10 0 0 0" Background="#FFD14A4A"
+                                    Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
+                                      ToolTip="MaterialDesignFloatingActionMiniLightButton"
+                                      IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}">
+                                        <Image Source="/Imagens/remover.png" Width="20" Height="20"/>
+                                    </Button>
+                                </StackPanel>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
+
+                       
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
