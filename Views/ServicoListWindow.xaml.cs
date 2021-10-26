@@ -58,20 +58,33 @@ namespace PETTWARE.Views
         private void btnEditar_Click(object sender, RoutedEventArgs e)
         {
             var servicoSelected = datagridServico.SelectedItem as Servico;
+
+            var window = new CadastrarServicoWindow(servicoSelected.Id);
+            window.ShowDialog();
+            LoadList();
+           
+        }
+
+        private void btnRemover_Click(object sender, RoutedEventArgs e)
+        {
+            var servicoSelected = datagridServico.SelectedItem as Servico;
+
+            var result = MessageBox.Show($"Deseja realmente remover o Serviço {servicoSelected.Nome} ?","Confirmação de Esxclusão"
+                , MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
             try
             {
-                var dao = new ServicoDAO();
-                var serv = dao.GetById(servicoSelected.Id);
-                MessageBox.Show(serv.Nome + " Preço: " + serv.PrecoComDesconto);
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new ServicoDAO();
+                    dao.Delete(servicoSelected);
+                    LoadList();
+                }
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
-            
-
-           
         }
     }
 }

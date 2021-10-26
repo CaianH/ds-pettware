@@ -17,7 +17,23 @@ namespace PETTWARE.Models
         }
         public void Delete(Servico t)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var query = conn.Query();
+                query.CommandText = "DELETE FROM Servico WHERE cod_serv = @id";
+
+                query.Parameters.AddWithValue("@id", t.Id);
+                
+
+                var result = query.ExecuteNonQuery();
+            } catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public Servico GetById(int id)
@@ -38,13 +54,10 @@ namespace PETTWARE.Models
 
                 while (reader.Read())
                 {
-
                     servico.Id = reader.GetInt32("cod_serv");
                     servico.Nome = reader.GetString("nome_serv");
                     servico.PrecoNormal = reader.GetDouble("preconormal_serv");
                     servico.PrecoComDesconto = reader.GetDouble("precocomdesconto_serv");
-
-                    
                 }
                 return servico;
             }
@@ -118,7 +131,33 @@ namespace PETTWARE.Models
 
         public void Update(Servico t)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var query = conn.Query();
+                query.CommandText = "UPDATE Servico SET nome_serv = @nome, preconormal_serv = @preconormal," +
+                    " precocomdesconto_serv = @precocomdesconto" +
+                    " WHERE cod_serv = @id";
+
+                query.Parameters.AddWithValue("@nome", t.Nome);
+                query.Parameters.AddWithValue("@preconormal", t.PrecoNormal);
+                query.Parameters.AddWithValue("@precocomdesconto", t.PrecoComDesconto);
+
+                query.Parameters.AddWithValue("@id", t.Id);
+
+                var result = query.ExecuteNonQuery();
+
+                if (result == 0)
+                    throw new Exception("Atualização de registro falhou");
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
+    
     }
 }
