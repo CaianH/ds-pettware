@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PETTWARE.Views"
         mc:Ignorable="d"
-        Title="ServicoListWindow" Background="#FFF5F3F4"  Height="450" Width="800" Loaded="ServicoListWindow_Loaded" WindowStartupLocation="CenterScreen">
+        Title="Consultar Serviço" Background="#FFF5F3F4" MaxHeight="600" MaxWidth="900" MinHeight="450" MinWidth="800" Loaded="ServicoListWindow_Loaded" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             
@@ -19,7 +19,7 @@
         <Border  Grid.Row="0" BorderThickness="1" BorderBrush="#FF5C677D" Height="22" Width="1922" Background="#FF5C677D"/>
 
         <WrapPanel HorizontalAlignment="Center" Margin="30 10 0 0" Grid.Row="4" >
-            <DataGrid x:Name="datagridServico" Height="200" Width="680" Loaded="datagridServico_Loaded" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid x:Name="datagridServico" Height="400" Width="680" Loaded="datagridServico_Loaded" SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
                     <DataGridTextColumn Header="Serviço" Binding="{Binding Nome}"/>
