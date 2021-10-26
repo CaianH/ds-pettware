@@ -39,7 +39,7 @@
             <WrapPanel Grid.Row="2" Grid.Column="0" Margin="30 30 0 0">
 
                 <Label Content="Nome" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox x:Name="txtNome" Text="Maria Oliveira" Width="200" FontSize="17"/>
+                <TextBox x:Name="txtNome" Text="" Width="200" FontSize="17"/>
 
             </WrapPanel>
             
@@ -48,16 +48,16 @@
 
             <WrapPanel Grid.Row="5" Grid.Column="0" Margin="30 30 0 0">
                 <Label Content="Telefone" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox x:Name="txtTelefone" Text=" (00) 0 0000-0000" Width="200" FontSize="17"/>
+                <TextBox x:Name="txtTelefone" Text="" Width="200" FontSize="17"/>
             </WrapPanel>
             
             <WrapPanel Grid.Row="5" Grid.Column="0" Margin="30 30 0 0">
                 <Label Content="E-mail" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox x:Name="txtEmail" Text=" mariaoliver@gmail.com" Width="200" FontSize="17"/>
+                <TextBox x:Name="txtEmail" Text="" Width="200" FontSize="17"/>
             </WrapPanel>
 
             <StackPanel Grid.Row="1" Grid.Column="0" Margin="30 70 0 0">
-                <Button x:Name="btnAdd" Margin="0 0 0 0" Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left">
+                <Button x:Name="btnAdd" Margin="0 0 0 0" Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Click="btnAdd_Click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="0 5 10 0" Text="Adicionar" FontSize="17" FontWeight="Bold"/>
                         <Image Source="/Imagens/iconeadicionar.png"/>
@@ -82,14 +82,14 @@
 
             <WrapPanel Margin="30 130 0 0">
                 <Label Content="Nome Representante" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox x:Name="txtRepresentante" Text="Carlos Antônio" Width="200" FontSize="17"/>
+                <TextBox x:Name="txtRepresentante" Text="" Width="200" FontSize="17"/>
             </WrapPanel>
 
 
             <WrapPanel  Margin="30 30 0 0">
 
                 <Label Content="CNPJ" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox x:Name="txtCNPJ" Text=" 00.000.000/0001-00" Width="200" FontSize="17"/>
+                <TextBox x:Name="txtCNPJ" Text="" Width="200" FontSize="17"/>
 
             </WrapPanel>
 

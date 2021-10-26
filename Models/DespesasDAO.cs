@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using PETTWARE.Interfaces;
+using MySql.Data.MySqlClient;
 using PETTWARE.DataBase;
 
 namespace PETTWARE.Models
@@ -56,7 +57,38 @@ namespace PETTWARE.Models
         }
         public List<Despesas> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Despesas> list = new List<Despesas>();
+
+                var query = conn.Query();
+
+                query.CommandText = "SELECT * FROM Despesas";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Despesas()
+                    {
+
+                        Id = reader.GetInt32("cod_forn"),
+                        TipoDespesa = reader.GetString("nome_desp"),
+                        NomeDespesa = reader.GetString("email_desp"),
+
+                    });
+                }
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public void Update(Despesas t)

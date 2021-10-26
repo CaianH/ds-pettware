@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PETTWARE.Views;
 using PETTWARE.Models;
 
 namespace PETTWARE
@@ -40,6 +41,9 @@ namespace PETTWARE
                 fornecerdorDAO.Insert(fornecedor);
 
                 MessageBox.Show("Cadastro Salvo com Sucesso!", "Cadastrar Fornecedores", MessageBoxButton.OK, MessageBoxImage.Information);
+
+
+
 
                 ClearInputs();
             }
@@ -72,6 +76,17 @@ namespace PETTWARE
             }
 
             
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnConsul_Click(object sender, RoutedEventArgs e)
+        {
+            FornecedorListWindow ListaFornecedor = new FornecedorListWindow();
+            ListaFornecedor.ShowDialog();
         }
     }
 

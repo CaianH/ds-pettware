@@ -10,6 +10,5 @@ namespace PETTWARE.Models
         public string TipoDespesa { get; set; }
         public string NomeDespesa { get; set; }
         
-
     }
 }
