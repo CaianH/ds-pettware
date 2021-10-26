@@ -44,16 +44,7 @@
             </WrapPanel>
             
 
-            <WrapPanel Grid.Row="3" Grid.Column="0" Margin="30 30 0 0">
-                <Label Content="CPF" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox x:Name="txtCPF" Text=" 000.000.000-00" Width="200" FontSize="17"/>
-            </WrapPanel>
             
-
-            <WrapPanel Grid.Row="4" Grid.Column="0" Margin="30 30 0 0">
-                <Label Content="RG" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox x:Name="txtRG" Text=" 00.000.000-00" Width="200" FontSize="17"/>
-            </WrapPanel>
 
             <WrapPanel Grid.Row="5" Grid.Column="0" Margin="30 30 0 0">
                 <Label Content="Telefone" Margin="0 0 10 0" FontSize="17"/>
@@ -88,49 +79,18 @@
 
         <StackPanel Grid.Row="1" Grid.Column="2">
 
-            <WrapPanel Margin="30 30 0 0" >
 
-                <Label Content="UF" Margin="0 0 10 0" FontSize="17"/>
-                <ComboBox x:Name="ComboUF" FontSize="17" Width="60">
-                    <ComboBoxItem>RO</ComboBoxItem>
-                    <ComboBoxItem>AC</ComboBoxItem>
-                    <ComboBoxItem>AM</ComboBoxItem>
-                </ComboBox>
+            <WrapPanel Margin="30 130 0 0">
+                <Label Content="Nome Representante" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtRepresentante" Text="Carlos Antônio" Width="200" FontSize="17"/>
             </WrapPanel>
+
 
             <WrapPanel  Margin="30 30 0 0">
 
                 <Label Content="CNPJ" Margin="0 0 10 0" FontSize="17"/>
                 <TextBox x:Name="txtCNPJ" Text=" 00.000.000/0001-00" Width="200" FontSize="17"/>
 
-            </WrapPanel>
-          
-
-            <WrapPanel  Margin="30 30 0 0">
-
-                <Label Content="CEP" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox x:Name="txtCEP" Text="00000-000" Width="200" FontSize="17"/>
-
-            </WrapPanel>
-
-            <WrapPanel Margin="30 30 0 0">
-                <Label Content="Bairro" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox x:Name="txtBairro" Text=" 000.000.000-00" Width="200" FontSize="17"/>
-            </WrapPanel>
-
-            <WrapPanel  Margin="30 30 0 0">
-                <Label Content="Logradouro" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox x:Name="txtLogradouro" Text=" 00.000.000-00" Width="200" FontSize="17"/>
-            </WrapPanel>
-
-            <WrapPanel Margin="30 30 0 0">
-                <Label Content="Número" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox x:Name="txtNum" Text=" (00) 0 0000-0000" Width="200" FontSize="17"/>
-            </WrapPanel>
-
-            <WrapPanel Margin="30 30 0 0">
-                <Label Content="Nome Representante" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox x:Name="txtRepresentante" Text="Carlos Antônio" Width="200" FontSize="17"/>
             </WrapPanel>
 
             <WrapPanel Margin="30 70 0 0" Grid.Row="1" Grid.Column="2">

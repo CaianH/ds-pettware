@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Text;
 using PETTWARE.Interfaces;
 using PETTWARE.DataBase;
+using MySql.Data.MySqlClient;
 
 
 
 namespace PETTWARE.Models
 {
-    class FonecedorDAO : IDAO<Fornecedor>
+    class FornecedorDAO : IDAO<Fornecedor>
     {
 
         private static conexao conn;
 
-        public FonecedorDAO()
+        public FornecedorDAO()
         {
             conn = new conexao();
         }
@@ -58,7 +59,41 @@ namespace PETTWARE.Models
 
         public List<Fornecedor> List()
         {
-            throw new NotImplementedException();
+
+            try
+            {
+                List<Fornecedor> list = new List<Fornecedor>();
+
+                var query = conn.Query();
+                query.CommandText = "SELECT * FROM fornecedor";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Fornecedor() { 
+
+                      id = reader.GetInt32("cod_forn"),
+                      NomeForn = reader.GetString("nome_forn"),
+                      Email = reader.GetString("email_forn"),
+                      CNPJ = reader.GetString("cnpj_forn"),
+                      Telefone = reader.GetString("telefone_forn"),
+                      RepresentanteForn = reader.GetString("email_forn"),
+                   
+                    });
+                }
+
+                return list;
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
+            
         }
 
         public void Update(Fornecedor t)

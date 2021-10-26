@@ -40,6 +40,7 @@ namespace PETTWARE
 
                 MessageBox.Show("Cadastro Salvo com Sucesso!", "Cadastrar Fornecedores", MessageBoxButton.OK, MessageBoxImage.Information);
 
+                ClearInputs();
             }
             catch (Exception ex)
             {
@@ -50,7 +51,14 @@ namespace PETTWARE
 
         }   
 
-
+        private void ClearInputs()
+        {
+           txtCNPJ.Text = "" ;
+           txtNome.Text = "" ;
+           txtTelefone.Text = "" ;
+           txtEmail.Text = "" ;
+           txtRepresentante.Text = "";
+        }
 
         private void bntExcluir_Click(object sender, RoutedEventArgs e)
         {

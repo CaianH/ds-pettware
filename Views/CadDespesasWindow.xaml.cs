@@ -37,6 +37,7 @@ namespace PETTWARE
 
                 MessageBox.Show("Cadastro Salvo com Sucesso!", "Cadastrar Despesas", MessageBoxButton.OK, MessageBoxImage.Information);
 
+                ClearInputs();
             }
             catch (Exception ex)
             {
@@ -46,6 +47,12 @@ namespace PETTWARE
             }
 
           
+        }
+
+        private void ClearInputs()
+        {
+            ComboTipoDes.Text = "";
+            txtNome.Text = "";
         }
 
         private void bntExcluir_Click(object sender, RoutedEventArgs e)
