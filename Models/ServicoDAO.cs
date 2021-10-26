@@ -22,7 +22,40 @@ namespace PETTWARE.Models
 
         public Servico GetById(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var query = conn.Query();
+                query.CommandText = "SELECT * FROM Servico WHERE cod_serv = @id";
+
+                query.Parameters.AddWithValue("@id", id);
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                if (!reader.HasRows)
+                    throw new Exception("Nenhum Registro encontrado");
+
+                var servico = new Servico();
+
+                while (reader.Read())
+                {
+
+                    servico.Id = reader.GetInt32("cod_serv");
+                    servico.Nome = reader.GetString("nome_serv");
+                    servico.PrecoNormal = reader.GetDouble("preconormal_serv");
+                    servico.PrecoComDesconto = reader.GetDouble("precocomdesconto_serv");
+
+                    
+                }
+                return servico;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Query();
+            }
         }
          
         public void Insert(Servico t)

@@ -54,5 +54,24 @@ namespace PETTWARE.Views
         {
 
         }
+
+        private void btnEditar_Click(object sender, RoutedEventArgs e)
+        {
+            var servicoSelected = datagridServico.SelectedItem as Servico;
+            try
+            {
+                var dao = new ServicoDAO();
+                var serv = dao.GetById(servicoSelected.Id);
+                MessageBox.Show(serv.Nome + " Preço: " + serv.PrecoComDesconto);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            
+
+           
+        }
     }
 }

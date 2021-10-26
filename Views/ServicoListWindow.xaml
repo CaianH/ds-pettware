@@ -35,7 +35,7 @@
                                     <Button x:Name="btnEditar"
                                         Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
                                       ToolTip="MaterialDesignFloatingActionMiniLightButton"
-                                      IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}">
+                                      IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Click="btnEditar_Click">
                                         <Image Source="/Imagens/edit.png" Width="20" Height="20"/>
                                     </Button>
 
