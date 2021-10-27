@@ -45,40 +45,66 @@ namespace PETTWARE
 
         private void Salvar_Click(object sender, RoutedEventArgs e)
         {
-                  
-                    _servico.Nome = TBServico.Text;
-                    _servico.PrecoNormal = Convert.ToDouble(TBPrecoNormal.Text);
-                    _servico.PrecoComDesconto = Convert.ToDouble(TBPrecoComDesconto.Text);
+
+            _servico.Nome = TBServico.Text;
+
+            if (double.TryParse(TBPrecoNormal.Text, out double PrecoNormal))
+                _servico.PrecoNormal = Convert.ToDouble(TBPrecoNormal.Text);
+
+            if (double.TryParse(TBPrecoComDesconto.Text, out double PrecoComDesconto))
+                _servico.PrecoComDesconto = Convert.ToDouble(TBPrecoComDesconto.Text);
 
             SaveData();
 
         }
 
+        private bool Validate()
+        {
+            var validator = new ServicoValidator();
+            var result = validator.Validate(_servico);
+
+            if (!result.IsValid)
+            {
+                string errors = null;
+                int count = 1;
+
+                foreach (var failure in result.Errors)
+                {
+                    errors += $"{count++} - {failure.ErrorMessage}\n";
+
+                }
+                MessageBox.Show(errors, "Validação de dados", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            return result.IsValid;
+        }
         private void SaveData()
         {
             try
             {
 
-                var dao = new ServicoDAO();
-                var text = "Atualizado";
-
-                if(_servico.Id == 0)
+                if (Validate())
                 {
-                    dao.Insert(_servico);
-                    text = "Adicionado";
+                    var dao = new ServicoDAO();
+                    var text = "Atualizado";
+
+                    if (_servico.Id == 0)
+                    {
+                        dao.Insert(_servico);
+                        text = "Adicionado";
+                    }
+                    else
+                        dao.Update(_servico);
+
+                    MessageBox.Show($"Serviço {text} com sucesso!!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                    TBServico.IsEnabled = false;
+                    TBPrecoNormal.IsEnabled = false;
+                    TBPrecoComDesconto.IsEnabled = false;
+                    btnSalvar.IsEnabled = false;
+
+
+                    ClearInputs();
                 }
-                else
-                    dao.Update(_servico);
-
-                MessageBox.Show($"Serviço {text} com sucesso!!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
-
-                TBServico.IsEnabled = false;
-                TBPrecoNormal.IsEnabled = false;
-                TBPrecoComDesconto.IsEnabled = false;
-                btnSalvar.IsEnabled = false;
-                btnCancelar.IsEnabled = false;
-
-                ClearInputs();
             }
             catch(Exception ex)
             {
