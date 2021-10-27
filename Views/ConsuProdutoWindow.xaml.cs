@@ -33,7 +33,7 @@ namespace PETTWARE
                 listaProdutos.Add(new Produtos()
                 {
 
-                    Nome = "Produto" + i,
+                    Descricao = "Produto" + i,
                     Marca = "Marca" + i,
                     Peso = 30 * i,
                     Preco = 20 * i,

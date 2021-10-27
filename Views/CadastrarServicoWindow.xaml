@@ -64,7 +64,7 @@
                 </StackPanel>
             </Button>
 
-            <Button x:Name="btnCancelar" Margin="0 0 500 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Cursor="Hand" Click="Cancelar_Click" IsEnabled="False">
+            <Button x:Name="btnCancelar" Margin="0 0 500 0"  Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Cursor="Hand" Click="Cancelar_Click">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Margin="0 5 20 0" Text="Cancelar" FontSize="17" FontWeight="Bold"/>
                     <Image Source="/Imagens/cancelarExcluir.png"/>

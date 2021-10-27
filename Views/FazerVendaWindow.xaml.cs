@@ -19,10 +19,22 @@ namespace PETTWARE
     /// </summary>
     public partial class FazerVendaWindow : Window
     {
+
+
+
+        private Venda _venda;
+
+        private List<VendaItem> _vendaItensList = new List<VendaItem>();
         public FazerVendaWindow()
         {
             InitializeComponent();
             Loaded += datagridVenda_Loaded;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            _venda = new Venda();
+            LoadComboBox();
         }
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -31,38 +43,81 @@ namespace PETTWARE
 
         private void datagridVenda_Loaded(object sender, RoutedEventArgs e)
         {
-            LoadComboBox();
 
-            List<Venda> listaProdutos = new List<Venda>();
+            
+            
 
-            for (int i = 1; i < 10; i++)
-            {
-                listaProdutos.Add(new Venda()
-                {
-                    ID = i,
-                    Produto = "produto" + i,
-                    Quantidade = i,
-                    ValorUnitario = "$" + 80*i,
-                    ValorcomDesconto = "$" + 75*i,
-                }) ;
-            }
-            datagridVenda.ItemsSource = listaProdutos;
+            
         }
 
         private void Vender_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Venda Concluída com Sucesso!!", "Vender", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (ComboBoxFuncionario.SelectedItem != null)
+                _venda.Funcionario = ComboBoxFuncionario.SelectedItem as Funcionarios;
+
+            if (ComboBoxCliente.SelectedItem != null)
+                _venda.Cliente = ComboBoxCliente.SelectedItem as Cliente;
+
+            if (ComboBoxPagamento.SelectedItem != null)
+                _venda.FormaPagamento = ComboBoxPagamento.Text;
+
+            _venda.Valortotal = UpdateValorTotal();
+
+            if (DatePickerVenda.SelectedDate != null)
+                _venda.Data = (DateTime)DatePickerVenda.SelectedDate;
+
+            _venda.Itens = _vendaItensList;
+
+            SaveData();
         }
 
+        
+        private void SaveData()
+        {
+            try
+            {
+                if (Validate())
+                {
+
+                    var dao = new VendaDAO();
+                        dao.Insert(_venda);
+                        
+                   
+                        MessageBox.Show($"Venda Realizada com sucesso!!", "Sucesso", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Não Executado", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+        }
+        private bool Validate()
+        {
+            var validator = new VendaValidator();
+            var result = validator.Validate(_venda);
+
+            if (!result.IsValid)
+            {
+                string errors = null;
+                int count = 1;
+
+                foreach (var failure in result.Errors)
+                {
+                    errors += $"{count++} - {failure.ErrorMessage}\n";
+
+                }
+                MessageBox.Show(errors, "Validação de dados", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            return result.IsValid;
+        }
         private void ExcluirBt_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult Result = MessageBox.Show("Deseja Excluir o Produto da lista?", "Confirmação", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            switch (Result)
-            {
-                case MessageBoxResult.Yes:
-                    MessageBox.Show("Produto Excluído com Sucesso!!", "Confirmação", MessageBoxButton.OK, MessageBoxImage.Information);
-                    break;
-            }
+            var ItemSelecionado = datagridVenda.SelectedItem as VendaItem;
+            _vendaItensList.Remove(ItemSelecionado);
+            LoadDataGrid();
         }
 
         private void LoadComboBox()
@@ -71,11 +126,77 @@ namespace PETTWARE
             {
                 ComboBoxFuncionario.ItemsSource = new FuncionariosDAO().List();
                 ComboBoxCliente.ItemsSource = new ClienteDAO().List();
+                
             }
             catch (Exception ex)
             {
 
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            VendaProdutoListAdd Vendaprodlist = new VendaProdutoListAdd();
+            Vendaprodlist.ShowDialog();
+
+            var produtosSelecionadosList = Vendaprodlist.ProdutosSelecionados;
+            var count = 1;
+
+            foreach(Produtos produto in produtosSelecionadosList)
+            {
+
+                if(!_vendaItensList.Exists(item => item.Produto.Codigo == produto.Codigo))
+                {
+                    _vendaItensList.Add(new VendaItem()
+                    {
+                        Id = count,
+                        Produto = produto,
+                        Quantidade = 1,
+                        ValorTotal = produto.PrecoComDesconto,
+                        Valor = produto.PrecoComDesconto
+
+
+
+                    });
+                    count++;
+                }
+            }
+            
+            LoadDataGrid();
+        }
+
+        private double UpdateValorTotal()
+        {
+            double valor = 0;
+
+            _vendaItensList.ForEach(item => valor += item.ValorTotal);
+
+            TBvalortotal.Text = valor.ToString("C");
+
+            return valor;
+        }
+
+        private void LoadDataGrid()
+        {
+            _ = UpdateValorTotal();
+            datagridVenda.ItemsSource = null;
+            datagridVenda.ItemsSource = _vendaItensList;
+        }
+
+        private void datagridVenda_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            var item = e.Row.Item as VendaItem;
+
+            var value = (e.EditingElement as TextBox).Text;
+
+            _ = int.TryParse(value, out int quantidade);
+
+            if(quantidade > 1)
+            {
+                item.Quantidade = quantidade;
+                item.ValorTotal = quantidade * item.Valor;
+            }
+            LoadDataGrid();
         }
     }
 }

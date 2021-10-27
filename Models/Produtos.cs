@@ -8,7 +8,7 @@ namespace PETTWARE
 
     {
 
-        public string Nome { get; set; }
+        public string Descricao { get; set; }
 
         public string Marca { get; set; }
 
@@ -16,11 +16,25 @@ namespace PETTWARE
 
         public int Preco { get; set; }
 
-        public int PrecoComDesconto { get; set; }
+        public double PrecoComDesconto { get; set; }
 
         public int QtdEmEstoque { get; set; }
 
         public int Codigo { get; set; }
+
+        private bool _selected = false;
+
+        public bool IsSelected
+        {
+            get
+            {
+                return _selected;
+            }
+            set
+            {
+                _selected = value;
+            }
+        }
 
     }
 }
