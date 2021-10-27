@@ -4,7 +4,7 @@ using System.Text;
 
 namespace PETTWARE.Models
 {
-    class Cliente
+    public class Cliente
     {
         public int Cod { get; set; }
         public string nome { get; set; }

@@ -9,6 +9,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using PETTWARE.Views;
+using PETTWARE.Models;
 
 namespace PETTWARE
 {
@@ -24,11 +26,13 @@ namespace PETTWARE
         }
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            
         }
 
         private void datagridVenda_Loaded(object sender, RoutedEventArgs e)
         {
+            LoadComboBox();
+
             List<Venda> listaProdutos = new List<Venda>();
 
             for (int i = 1; i < 10; i++)
@@ -58,6 +62,19 @@ namespace PETTWARE
                 case MessageBoxResult.Yes:
                     MessageBox.Show("Produto Excluído com Sucesso!!", "Confirmação", MessageBoxButton.OK, MessageBoxImage.Information);
                     break;
+            }
+        }
+
+        private void LoadComboBox()
+        {
+            try
+            {
+                ComboBoxFuncionario.ItemsSource = new FuncionariosDAO().List();
+                ComboBoxCliente.ItemsSource = new ClienteDAO().List();
+            }
+            catch (Exception ex)
+            {
+
             }
         }
     }

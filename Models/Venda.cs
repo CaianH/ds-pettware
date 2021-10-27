@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PETTWARE
+namespace PETTWARE.Models
 {
     public class Venda
     {
@@ -20,5 +20,8 @@ namespace PETTWARE
         public string ValorUnitario { get; set; }
 
         public string ValorcomDesconto { get; set; }
+
+        public Funcionarios Funcionario { get; set; }
+        public Cliente Cliente { get; set; }
     }
 }

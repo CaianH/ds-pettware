@@ -28,7 +28,9 @@
         <WrapPanel Grid.Row="1" Margin="30 15 0 0" Grid.ColumnSpan="2">
             <StackPanel Margin="0 0 100 0">
                 <Label Content="Nome do Cliente" Margin="0 0 10 0" FontSize="17"/>
-                <TextBox Width="250" Text="João Teixeira" Margin="0 0 50 0" FontSize="17" />
+                <ComboBox x:Name="ComboBoxCliente" DisplayMemberPath="nome" SelectedValuePath="Cod" Width="250" HorizontalAlignment="Left" FontSize="17">
+
+                </ComboBox>
             </StackPanel>
             <StackPanel Margin="0 0 100 0">
                 <Label Content="Forma de Pagamento" Margin="0 0 10 0" FontSize="17"/>
@@ -46,10 +48,8 @@
 
         <StackPanel Grid.Row="2" Margin="30 10 0 0" Grid.ColumnSpan="2">
             <Label Content="Nome do Funcionário" Margin="0 0 10 0" FontSize="17"/>
-            <ComboBox Width="250" HorizontalAlignment="Left" FontSize="17">
-                <ComboBoxItem>Thor Odin Son</ComboBoxItem>
-                <ComboBoxItem>Tony Stark</ComboBoxItem>
-                <ComboBoxItem>Steve Rogers</ComboBoxItem>
+            <ComboBox x:Name="ComboBoxFuncionario" DisplayMemberPath="Nome" SelectedValuePath="Codigo" Width="250" HorizontalAlignment="Left" FontSize="17">
+
             </ComboBox>
         </StackPanel>
 

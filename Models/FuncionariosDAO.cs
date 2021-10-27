@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using PETTWARE.Interfaces;
+using MySql.Data.MySqlClient;
+using PETTWARE.DataBase;
 
 namespace PETTWARE.Models
 {
@@ -14,6 +16,12 @@ namespace PETTWARE.Models
          * list (select * from funcionario)
          * getbyid(int id) (select * from funcionario where cod_func = 1)
         */
+        private static conexao conn;
+
+        public FuncionariosDAO()
+        {
+            conn = new conexao();
+        }
         public void Delete(Funcionarios t)
         {
             throw new NotImplementedException();
@@ -31,7 +39,37 @@ namespace PETTWARE.Models
 
         public List<Funcionarios> List()
         {
-            throw new NotImplementedException();
+            try
+            {
+                List<Funcionarios> list = new List<Funcionarios>();
+
+                var query = conn.Query();
+
+                query.CommandText = "SELECT * FROM Funcionario";
+
+                MySqlDataReader reader = query.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Funcionarios()
+                    {
+                        Codigo = reader.GetInt32("cod_func"),
+                        Nome = reader.GetString("nome_func"),
+
+
+                    });
+                }
+
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         public void Update(Funcionarios t)
