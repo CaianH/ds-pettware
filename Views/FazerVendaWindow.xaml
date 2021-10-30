@@ -1,0 +1,106 @@
+﻿<Window x:Class="PETTWARE.FazerVendaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PETTWARE"
+        xmlns:wpftool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        mc:Ignorable="d"
+        Title="Vender"  MinHeight="750" MinWidth="1000" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFF5F3F4" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+            
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0"  BorderThickness="1" BorderBrush="#FF5C677D" Height="22" Width="1922" Background="#FF5C677D" Grid.ColumnSpan="2" />
+
+        <WrapPanel Grid.Row="1" Margin="30 15 0 0" Grid.ColumnSpan="2">
+            <StackPanel Margin="0 0 100 0">
+                <Label Content="Nome do Cliente" Margin="0 0 10 0" FontSize="17"/>
+                <ComboBox x:Name="ComboBoxCliente" DisplayMemberPath="nome" SelectedValuePath="Cod" Width="250" HorizontalAlignment="Left" FontSize="17">
+
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Margin="0 0 100 0">
+                <Label Content="Forma de Pagamento" Margin="0 0 10 0" FontSize="17"/>
+                <ComboBox x:Name="ComboBoxPagamento" FontSize="17">
+                    <ComboBoxItem>3X NO CARTÃO</ComboBoxItem>
+                    <ComboBoxItem>2X NO CARTÃO</ComboBoxItem>
+                    <ComboBoxItem>ÁVISTA</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel >
+                <Label Content="Data da Venda" Margin="0 0 10 0" FontSize="17"/>
+                <DatePicker x:Name="DatePickerVenda" Width="200"/>
+            </StackPanel>
+        </WrapPanel>
+
+        <StackPanel Grid.Row="2" Margin="30 10 0 0" Grid.ColumnSpan="2">
+            <Label Content="Nome do Funcionário" Margin="0 0 10 0" FontSize="17"/>
+            <ComboBox x:Name="ComboBoxFuncionario" DisplayMemberPath="Nome" SelectedValuePath="Codigo" Width="250" HorizontalAlignment="Left" FontSize="17">
+
+            </ComboBox>
+        </StackPanel>
+
+        <WrapPanel Margin="30 10 0 0" Grid.Row="3" Grid.ColumnSpan="2">
+            
+            <Button VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="165" Height="105" HorizontalAlignment="Left" Background="LightBlue" Foreground="White" BorderBrush="#FFF5F3F4" Cursor="Hand" Click="Button_Click">
+                <StackPanel >
+                    <TextBlock Margin="0 0 0 0" Text="Adicionar Item" FontSize="17" FontWeight="Bold" Foreground="Black"/>
+                    <Image Source="/Imagens/novavenda.png" Height="61" Width="96"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="btnVender" VerticalAlignment="Bottom" Margin="50 0 0 0"  Grid.Row="3" Width="150" Height="105" HorizontalAlignment="Left" Background="LightGreen" Foreground="White" BorderBrush="#FFF5F3F4" Cursor="Hand" Click="Vender_Click">
+                <StackPanel >
+                    <TextBlock Margin="15 0 0 0" Text="Vender" FontSize="17" FontWeight="Bold" Foreground="Black"/>
+                    <Image Source="/Imagens/vender.png" Height="61" Width="96"/>
+                </StackPanel>
+            </Button>
+        </WrapPanel>
+
+        <WrapPanel Margin="30 10 0 0" Grid.Row="4" Grid.ColumnSpan="2">
+            <DataGrid x:Name="datagridVenda" CellEditEnding="datagridVenda_CellEditEnding" Height="200" Width="780" Loaded="datagridVenda_Loaded" SelectionChanged="DataGrid_SelectionChanged" AutoGenerateColumns="False" CanUserAddRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" IsReadOnly="true" Binding="{Binding Id}"/>
+                    <DataGridTextColumn Header="Produto" IsReadOnly="true" Binding="{Binding Produto.Descricao}"/>
+                    <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}"/>
+                    <DataGridTextColumn Header="Valor Unitario" IsReadOnly="true" Binding="{Binding Valor}"/>
+                    <DataGridTextColumn Header="Valor Total" IsReadOnly="true" Binding="{Binding ValorTotal}"/>
+
+                    <DataGridTemplateColumn Header="Ações">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Margin="2" Padding="4" Background="#FFD14A4A" Foreground="White" Cursor="Hand" Click="ExcluirBt_Click">Remover Produto</Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            
+        </WrapPanel>
+
+        <WrapPanel Margin="0,0,0,0" Grid.Row="5" >
+            <Label Content="Valor Total" Margin="30 0 0 0" FontSize="20" FontWeight="Bold"/>
+            <TextBlock x:Name="TBvalortotal" Margin="5,0,0,0" Height="30" Width="100" Text="00,00" FontSize="20" FontWeight="Bold" Foreground="#FF2E7127" Background="White"/>
+        </WrapPanel>
+
+        <StackPanel Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Image Source="/Imagens/png loja.png" Height="75" Width="250"/>
+        </StackPanel>
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,120 @@
+﻿<Window x:Class="PETTWARE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PETTWARE"
+        xmlns:wpftool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="17"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="PETTWARE" MinHeight="650" MinWidth="900" WindowStartupLocation="CenterScreen" WindowState="Maximized" >
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="1">
+
+            <Menu Background="#2a9d8f">
+                <!--___________CADASTROS___________-->
+                <MenuItem Header="Cadastrar" Click="MenuItem_Click" Foreground="Black">
+
+                    <MenuItem Header="Serviço" Click="Click_CadServico"/>
+
+                    <MenuItem Header="Produto" Name="MN_Produto" Click="Click_Produto"/>
+                    <MenuItem Header="Cliente" Name="MN_Cliente" Click="Click_CadCliente"/>
+                    <MenuItem Header="Funcionário" Name="MN_Funcionario"  Click="Click_CadFuncionario"/>
+                    <MenuItem Header="Fornecedor" Click="Click_CadFornecedor"/>
+                    <MenuItem Header="Despesas" Click="Click_CadDespesas"/>
+                    <MenuItem Header="Tipo de Despesa" Click="TipoDespesa_Click"/>
+                    <MenuItem Header="Usuário" Click="CadUsuario_Click"/>
+                </MenuItem>
+                <!--___________CADASTROS___________-->
+
+
+                <!--___________CONSULTAS___________-->
+                <MenuItem Header="Consultar" Click="Consultar_Click" Foreground="Black">
+                    <MenuItem Header="Produto" Click="Produto_Click"/>
+                    <MenuItem Header="Cliente" Click="ConsultarCliente_Click"/>
+                    <MenuItem Header="Caixa" Click="ConsuCaixa_Click"/>
+                    <MenuItem Header="Funcionário" Click="ConsuFuncionario"/>
+                </MenuItem>
+                <!--___________CONSULTAS___________-->
+
+                <MenuItem Header="Vender" Click="Click_Vender" Foreground="Black"/>
+
+
+            </Menu>
+
+        </StackPanel>
+
+        <StackPanel Grid.RowSpan="2" Grid.Column="0" Background="#073b4c">
+            <Image Margin="30" Source="/Imagens/png loja.png" Height="128" Width="250"/>
+
+            <StackPanel Margin="30 0 0 0" Grid.Row="1" Grid.Column="0">
+                <Button Margin="0 0 0 20" Width="200" Height="50" BorderBrush="#FF264653" Cursor="Hand" Click="BtProdutos_Click" Background="#FF2A9D8F">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 10 20 0" Text="Produtos" FontSize="17" Foreground="#FFF5F3F4"/>
+                        <Image Source="/Imagens/produtos.png"/>
+                    </StackPanel>
+                </Button>
+                <Button Margin="0 0 0 20" Width="200" Height="50" Name="MN_funcionario" Cursor="Hand" Click="BtFuncionarios_Click" Background="#FF2A9D8F">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 10 20 0" Text="Funcionários" FontSize="17" Foreground="#FFF5F3F4"/>
+                        <Image Source="/Imagens/funcionarios.png"/>
+                    </StackPanel>
+                </Button>
+                <Button Margin="0 0 0 20" Width="200" Height="50"   Cursor="Hand" Click="BtClientes_Click" Background="#FF2A9D8F">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 10 20 0" Text="Clientes" FontSize="17" Foreground="#FFF5F3F4"/>
+                        <Image Source="/Imagens/cliente.png"/>
+                    </StackPanel>
+                </Button>
+                <Button Margin="0 0 0 20" Width="200" Height="50" Cursor="Hand" Click="BtCaixa_Click" Background="#FF2A9D8F">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 10 20 0" Text="Caixa" FontSize="17" Foreground="#FFF5F3F4"/>
+                        <Image Source="/Imagens/caixa.png"/>
+                    </StackPanel>
+                </Button>
+                <Button Margin="0 0 0 20" Width="200" Height="50"  Cursor="Hand" Click="BtVender_Click" Background="#FF2A9D8F">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 10 20 0" Text="Vender" FontSize="17" Foreground="#FFF5F3F4"/>
+                        <Image Source="/Imagens/carrinho.png"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Window>

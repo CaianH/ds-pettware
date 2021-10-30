@@ -1,0 +1,152 @@
+﻿<Window x:Class="PETTWARE.Views.CadastrarFuncionarioWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PETTWARE.Views"
+        mc:Ignorable="d"
+        Title="CadastrarFuncionarioWindow" MinHeight="655" MinWidth="1000" WindowState="Maximized" Background="#FFF5F3F4">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="200*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="#FF5C677D" Height="22" Width="1922" Background="#FF5C677D"/>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <WrapPanel Grid.Row="1" Grid.Column="0" Margin="30 30 0 0" >
+
+                <Label Content="Código" Margin="0 20 10 0" FontSize="17"/>
+                <TextBlock x:Name="txtCod" Text="001" Width="45" Height="30"  FontSize="17" Background="White" Margin="0 0 100 0"/>
+
+            </WrapPanel>
+
+
+            <WrapPanel Grid.Row="2" Grid.Column="0" Margin="30 30 0 0">
+
+                <Label Content="Nome" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtNome" Text="Maria Oliveira" Width="200" FontSize="17"/>
+
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="3" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="CPF" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtCPF" Text=" 000.000.000-00" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="4" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="RG" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtRG" Text=" 00.000.000-00" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="5" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="Telefone" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtTelefone" Text=" (00) 0 0000-0000" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="6" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="Data de Nascimento" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="dtPickerDataNascimento" Text="" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="7" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="Naturalidade" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtNaturalidade" Text="" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="8" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="Nacionalidade" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtNacionalidade" Text="" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Grid.Row="8" Grid.Column="0" Margin="30 30 0 0">
+                <Label Content="Email" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtemail" Text="" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="30 70 0 0">
+                <Button x:Name="btnAdd" Margin="0 0 0 0" Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 5 10 0" Text="Adicionar" FontSize="17" FontWeight="Bold"/>
+                        <Image Source="/Imagens/iconeadicionar.png"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="btnConsul" Margin="0 20 0 0" Grid.Row="3" Width="150" Height="35" HorizontalAlignment="Left">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 5 10 0" Text="Consultar" FontSize="17" FontWeight="Bold"/>
+                        <Image Source="/Imagens/consultar.png"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+
+
+
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2">
+
+
+
+
+            <WrapPanel  Margin="30 30 0 0">
+
+                <Label Content="CEP" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtCEP" Text="00000-000" Width="200" FontSize="17"/>
+
+            </WrapPanel>
+
+            <WrapPanel Margin="30 30 0 0">
+                <Label Content="Bairro" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtBairro" Text=" 000.000.000-00" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel  Margin="30 30 0 0">
+                <Label Content="Logradouro" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtLogradouro" Text=" 00.000.000-00" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Margin="30 30 0 0">
+                <Label Content="Número" Margin="0 0 10 0" FontSize="17"/>
+                <TextBox x:Name="txtNum" Text=" (00) 0 0000-0000" Width="200" FontSize="17"/>
+            </WrapPanel>
+
+            <WrapPanel Margin="30 40 0 0" Grid.Row="1" Grid.Column="2">
+                <Button x:Name="btnSalvar" Margin="0 0 20 0"   Width="150" Height="35" HorizontalAlignment="Left" Background="#FF2B9348" Foreground="White" Click="btnSalvar_Click" Cursor="Hand">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 5 20 0" Text="Salvar" FontSize="17" FontWeight="Bold"/>
+                        <Image Source="/Imagens/salvar.png"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="btnExcluir" Margin="0 0 20 0"  Width="150" Height="35" HorizontalAlignment="Left" Background="#FFD00000" Foreground="White" Click="btnExcluir_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="0 5 20 0" Text="Excluir" FontSize="17" FontWeight="Bold"/>
+                        <Image Source="/Imagens/cancelarExcluir.png"/>
+                    </StackPanel>
+                </Button>
+            </WrapPanel>
+
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Image Source="/Imagens/png loja.png" Height="75" Width="250" Margin="0 50 0 0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" >
+            <Grid Background="#D6D6D6" Height="300" Width="1" VerticalAlignment="Center" Margin="0,25,0,0"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
