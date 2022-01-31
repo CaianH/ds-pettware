@@ -1,30 +1,4 @@
 
-/*
-EQUIPE: PETTWARE
-ALUNOS: Caian Henrique / Milena Lucas / Julia Cardoso / Alinne Tonetti / Pedro Henrique / Amanda Teodoro
-
-REQUISITOS FUNCIONAIS:
-2.1 Fazer Login                                                                                                      
-2.2 Acessar Menu                                                                                                  
-2.3 Cadastrar Produtos	
-2.4 Cadastrar Endereço                                                                                        
-2.5 Cadastrar Cliente
-2.6 Cadastrar Funcionário	
-2.7 Fazer Venda	
-2.8 Gerar Recebimento                                                                                         
-2.9 Cadastrar Serviços	
-2.10 Cadastrar Fornecedores	
-2.11 Cadastrar Compra                                                                                         
-2.12 Cadastrar despesas	
-2.13 Gerar Caixa                                                                                                   
-2.14 Consultar Caixa	
-2.15 Consultar Produto	
-2.16 Consultar Cliente	
-2.17 Consultar Funcionário	
-2.18 Cadastrar Usuário	
-2.19 Gerar Relatório de Despesas	
-2.20 Gerar Relatório de Vendas	
-_____________________________________*/
 
 #BANCO DE DADOS:
 CREATE database BD_Pettware;
